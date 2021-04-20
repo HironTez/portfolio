@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/logo.png" type="image/png">
+  <title>Hiron Tez portfolio</title>
+  
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/parallax.css">
+  <link rel="stylesheet" href="styles/charts.css">
+  <link rel="stylesheet" href="styles/works.css">
+  <link rel="stylesheet" href="styles/contact.css">
+  <link rel="stylesheet" href="styles/bottom.css">
+
+  <link href="styles/other styles/aos.css" rel="stylesheet">
+</head>
+<body>
+  <div id="header">
+    <div id="everything-in-header">
+      <div id="logo">
+        <img src="images/logo.svg" id="logo-icon">
+        <p id="logo-title">Hiron Tez</p>
+      </div>
+    </div>
+  </div>
+  <section class="first-section container" id="first-section">
+    <div id="pt" class="space-parent">
+      <canvas id="space"></canvas>
+    </div>
+      <div class="first" data-aos="zoom-in" data-aos-duration="2000">
+        <div>
+          <h1>Hiron Tez</h1>
+          <p class="main-text">Hello, i’m Full Stack Developer.</p>
+          <div id="button-more" onclick="scrollToElem($('section')[1]);">
+            More
+            <div class="arrow"></div>
+          </div>
+        </div>
+      </div>
+      <div class="mobile">
+        <img src="images/parallax/mobile.svg">
+      </div>
+      </div>
+      <div class="last" id="main-image" data-relative-input="true" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;">
+        <div style="backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;"><img class="main-image-background" src="images/parallax/background.svg"></div>
+        <div data-depth="0.3" class="first" style="transform: translate3d(26.5px, 5.1px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;"><img class="comp" src="images/parallax/6.svg"></div>
+        <div data-depth="0.1" style="transform: translate3d(8.8px, 1.7px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;"><img class="main-image-1" src="images/parallax/1.svg"></div>
+        <div data-depth="0.2" style="transform: translate3d(17.7px, 3.4px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;"><img class="main-image-2" src="images/parallax/2.svg"></div>
+        <div data-depth="0.2" style="transform: translate3d(17.7px, 3.4px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;"><img class="main-image-3" src="images/parallax/3.svg"></div>
+        <div data-depth="0.1" style="transform: translate3d(8.8px, 1.7px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;"><img class="main-image-4" src="images/parallax/4.svg"></div>
+        <div data-depth="0.1" style="transform: translate3d(8.8px, 1.7px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;"><img class="main-image-5" src="images/parallax/5.svg"></div>
+      </div>
+  </section>
+  <div id="pre-header" data-aos="fade-right">
+    <div onclick="scrollToPos(0);" class="active">
+      Home
+    </div>
+    <div onclick="scrollToElem($('#second-section')[0]);" class="inactive">
+      Skills
+    </div>
+    <div onclick="scrollToElem($('#third-section')[0]);" class="inactive">
+      Projects
+    </div>
+  </div>
+  <section class="second-section container" id="second-section">
+    <div class="header">
+      Skills
+      <div class="header-arrow-container waitScrollPosition">
+        <div class="header-arrow first-line"></div>
+        <div class="header-arrow second-line"></div>
+      </div>
+    </div>
+    <div class="choose-container chart">
+      <div class="choose chart active" onclick="changeTab(0, 'chart');">Technologies</div>
+      <div class="choose chart inactive" onclick="changeTab(1, 'chart');">Development</div>
+    </div>
+    <div class="charts-container">
+      <ul class="lines">
+        <li class="line l--0">
+          <span class="line__label title">
+            Skill level:
+          </span>
+        </li>
+        <li class="line l--25">
+          <span class="line__label">
+            The basics
+          </span>
+        </li>
+        <li class="line l--50">
+          <span class="line__label">
+            Advanced
+          </span>
+        </li>
+        <li class="line l--75">
+          <span class="line__label">
+            Seasoned
+          </span>
+        </li>
+        <li class="line l--100">
+          <span class="line__label">
+            Expert
+          </span>
+        </li>
+      </ul>
+      
+      <div class="charts">
+        <div class="chart chart--tab waitScrollPosition" id="technologies">
+          <ul class="chart--horiz">
+            <li class="chart__bar" style="width: 96%;">
+              <span class="chart__label">
+                HTML5
+              </span>
+            </li>
+            <li class="chart__bar" style="width: 98%;">
+              <span class="chart__label">
+                CSS3
+              </span>
+            </li>
+            <li class="chart__bar" style="width: 85%;">
+              <span class="chart__label">
+                JavaScript
+              </span>
+            </li>
+            <li class="chart__bar" style="width: 70%;">
+              <span class="chart__label">
+                jQuery
+              </span>
+            </li>
+            <li class="chart__bar" style="width: 50%;">
+              <span class="chart__label">
+                NodeJS
+              </span>
+            </li>
+            <li class="chart__bar" style="width: 90%;">
+              <span class="chart__label">
+                Python
+              </span>
+            </li>
+            <li class="chart__bar" style="width: 45%;">
+              <span class="chart__label">
+                Flask
+              </span>
+            </li>
+            <li class="chart__bar" style="width: 30%;">
+              <span class="chart__label">
+                C#
+              </span>
+            </li>
+            <li class="chart__bar" style="width: 25%;">
+              <span class="chart__label">
+                Unity
+              </span>
+            </li>
+            <li class="chart__bar" style="width: 60%;">
+              <span class="chart__label">
+                Photoshop
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="chart chart--tab hidden" id="development">
+          <ul class="chart--horiz">
+            <li class="chart__bar" style="width: 90%;">
+              <span class="chart__label">
+                Backend
+              </span>
+            </li>
+            <li class="chart__bar" style="width: 90%;">
+              <span class="chart__label">
+                Frontend
+              </span>
+            </li>
+            <li class="chart__bar" style="width: 70%;">
+              <span class="chart__label">
+                Desighn
+              </span>
+            </li>
+            <li class="chart__bar" style="width: 60%;">
+              <span class="chart__label">
+                Programs
+              </span>
+            </li>
+            <li class="chart__bar" style="width: 55%;">
+              <span class="chart__label">
+                Chat bots
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="third-section container" id="third-section">
+    <div class="header">
+      My works
+      <div class="header-arrow-container waitScrollPosition">
+        <div class="header-arrow first-line"></div>
+        <div class="header-arrow second-line"></div>
+      </div>
+    </div>
+    <div class="choose-container works">
+      <div class="choose works active" onclick="changeTab(0, 'works');">Sites</div>
+      <div class="choose works inactive" onclick="changeTab(1, 'works');">Programs</div>
+      <div class="choose works inactive" onclick="changeTab(2, 'works');">Games</div>
+      <div class="choose works inactive" onclick="changeTab(3, 'works');">Chat-bots</div>
+    </div>
+    <div id="works-container">
+      <div class="works--tab active works">
+        <div class="work">
+          <div class="mask"></div>
+          <div class="text">
+            <div class="title">PVD media player</div>
+            <div class="type"></div>
+            <div class="technologies">Python</div>
+          </div>
+          <div class="buttons">
+            <div class="button visit" onclick="redirect('https:\/\/hirontez.github.io/Rubiks-Cube/');">Visit</div>
+            <div class="button github" onclick="redirect('https:\/\/github.com/HironTez/Rubiks-Cube');">Github</div>
+          </div>
+        </div>
+      </div>
+      <div class="works--tab hidden works">
+        <div class="work">
+          <div class="mask"></div>
+          <div class="text">
+            <div class="title">PVD media player</div>
+            <div class="type"></div>
+            <div class="technologies">Python</div>
+          </div>
+          <div class="buttons">
+            <!-- <div class="button visit">Visit</div> -->
+            <div class="button github" onclick="redirect('https:\/\/github.com/HironTez/PVD-source-code');">Github</div>
+          </div>
+        </div>
+        <div class="work">
+          <div class="mask"></div>
+          <div class="text">
+            <div class="title">Auto backup folder (history)</div>
+            <div class="type"></div>
+            <div class="technologies">Python</div>
+          </div>
+          <div class="buttons">
+            <!-- <div class="button visit">Visit</div> -->
+            <div class="button github" onclick="redirect('https:\/\/github.com/HironTez/Auto-backup-folder-history-source-code');">Github</div>
+          </div>
+        </div>
+      </div>
+      <div class="works--tab hidden works">
+        <div class="no-work"><p>Unfortunately, there is nothing here.</p><p>Look at other tabs or help fill this one by ordering the work in the field below.</p></div>
+      </div>
+      <div class="works--tab hidden works">
+        <div class="no-work"><p>Unfortunately, there is nothing here.</p><p>Look at other tabs or help fill this one by ordering the work in the field below.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="contact">
+    <div class="form-container" onclick="closeForm(); closeButtonAnimation();">
+    <div class="form close" onclick="closeButtonAnimation();"></div>
+    <div class="title noParentClick">I’m excited to learn about your project and answer all your questions. Ready to get started?</div>
+    <form class="noParentClick">
+      <div class="input-container">
+        Name<br>
+        <input type="text" name="name" class="name">
+      </div>
+      <div class="input-container">
+        Email<br>
+        <input type="email" name="_replyto" class="replyto" required>
+      </div>
+      <div class="input-container">
+        Message<br>
+        <textarea name="message" class="message" rows="4" cols="50" required></textarea>
+      </div>
+      <br>
+      <button onclick="if (submitForm()) return true; else return false;">Send</button>
+    </form>
+  </div>
+  
+  <div class="sentence order">
+    <div class="title order" data-aos="zoom-in-right" data-aos-duration="500">Start a project</div>
+    <div class="text order" data-aos="zoom-in" data-aos-duration="500">Interested in working together?<br>Write your suggestions or questions.</div>
+    <div class="button order" onclick="showForm();" data-aos="zoom-in-left" data-aos-duration="500">Let's do this</div>
+  </div>
+  </div>
+  <section class="fourth-section container" id="four-section">
+    <div class="container in-bottom-section">
+      <div class="logo bottom container">
+        <img src="images/logo.svg" class="logo bottom">
+      </div>
+      <div class="text bottom">
+        Living, learning, & leveling up one day at a time.
+      </div>
+      <div class="button-up" onclick="scrollToPos(0);">
+        <div id="arrows">
+          <span class="arrow first next"></span>
+          <span class="arrow second next"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script src="scripts/other scripts/jquery.js"></script>
+  <script src="scripts/other scripts/parallax.js"></script>
+  <script src="scripts/other scripts/pt.min.js"></script>
+  <script src="scripts/other scripts/aos.js"></script>
+  <script src="scripts/canvas.js"></script>
+  <script src="scripts/script.js"></script>
+</body>
+</html>
