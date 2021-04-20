@@ -43,16 +43,16 @@ div.work {
         -o-transition: all 0.5s ease;
     }
 
-    div.work:nth-child(1) {
+    div.works--tab:nth-child(1) > div.work:nth-child(1) {
         background-image: url(/portfolio/images/projects/Rubiks-Cube.png);
     }
 
-    div.work:nth-child(2) {
-        background-image: url(/portfolio/images/projects/folder.png);
+    div.works--tab:nth-child(2) > div.work:nth-child(1) {
+        background-image: url(/portfolio/images/projects/mediaplayer.png);
     }
 
-    div.work:nth-child(3) {
-        background-image: url(/portfolio/images/projects/mediaplayer.png);
+    div.works--tab:nth-child(2) > div.work:nth-child(2) {
+        background-image: url(/portfolio/images/projects/folder.png);
     }
 
     div.work > div.text {
