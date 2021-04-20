@@ -1,0 +1,159 @@
+section.third-section.container#third-section {
+    min-height: 400px;
+}
+
+div.works--tab {
+    text-align: center;
+    padding-top: 5%;
+}
+
+div.works--tab.hidden {
+    display: none;
+}
+
+div.work {
+    background-color: rgb(39, 40, 41);
+    width: calc(330 * ((100vw - 42px) / (1440 - 42)));
+    height: calc((330 * ((100vw - 42px) / (1440 - 42))) / 100 * 70);
+    padding: 3%;
+    margin: 0.1%;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+
+    div.work > div.mask {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+    }
+
+    div.work:nth-child(1) {
+        background-image: url(/portfolio/images/projects/Rubiks-Cube.png);
+    }
+
+    div.work:nth-child(2) {
+        background-image: url(/portfolio/images/projects/folder.png);
+    }
+
+    div.work:nth-child(3) {
+        background-image: url(/portfolio/images/projects/mediaplayer.png);
+    }
+
+    div.work > div.text {
+        position: absolute;
+        left: 0;
+        right: 0;
+        transform: translate(0, -200%);
+        -webkit-transform: translate(0, -200%);
+        -moz-transform: translate(0, -200%);
+        -ms-transform: translate(0, -200%);
+        -o-transform: translate(0, -200%);
+        transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+    }
+
+    div.work > div.text > div.title {
+        font-size: calc(10px + (15 - 10) * ((100vw - 42px) / (466 - 42)));
+    }
+
+    div.work > div.text > div.technologies {
+        font-size: calc(10px + (13 - 10) * ((100vw - 42px) / (466 - 42)));
+        color: rgb(231, 51, 124);
+    }
+
+    div.work > div.buttons {
+        position: absolute;
+        bottom: 7%;
+        left: 0;
+        right: 0;
+        transform: translate(0, 300%);
+        -webkit-transform: translate(0, 300%);
+        -moz-transform: translate(0, 300%);
+        -ms-transform: translate(0, 300%);
+        -o-transform: translate(0, 300%);
+        transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+    }
+
+        div.work > div.buttons > div.button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: fit-content;
+            width: calc(10px + (40 - 10) * ((100vw - 42px) / (466 - 42)));
+            height: calc(10px + (15 - 10) * ((100vw - 42px) / (466 - 42)));
+            color: rgb(210, 206, 200);
+            border: 2px solid rgb(231, 51, 124);
+            background: none;
+            padding: 1px 6px;
+            transition: all 0.5s ease;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+        }
+        
+        div.work > div.buttons > div.button:focus {
+            outline: solid;
+            outline-color: black;
+        }
+
+        div.work > div.buttons > div.button:hover {
+            background-color: rgb(231, 51, 124);
+            cursor: pointer;
+        }
+
+    div.work:hover > div.mask {
+        background-color: rgb(24, 26, 27);
+        opacity: 0.9;
+    }
+
+    div.work:hover > div.text {
+        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+    }
+
+    div.work:hover > div.buttons {
+        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+    }
+
+div.no-work {
+    font-size: calc(10px + (15 - 10) * ((100vw - 42px) / (466 - 42)));
+}
+
+    div.no-work > p {
+        margin: 1%;
+    }
+
+    div.no-work > p:nth-child(1) {
+        color: rgb(231, 51, 124);
+    }
