@@ -181,15 +181,15 @@ function submitForm() {
     return false;
 }
 
-// Show message if form submited
+// Show message if form was submit
 function showSuccesMessage() {
-    if (formRecentlySubmited == false) {
-        formRecentlySubmited = true;
-        alert('Thank you for message! I will gladly answer you shortly.');
-        setTimeout(() => {
-            formRecentlySubmited = false;
-        }, 500);
-    }
+    alert('Thank you for message! I will gladly answer you shortly.');
+    let name = $('input.name')[0];
+    let email = $('input.replyto')[0];
+    let message = $('textarea.message')[0];
+    name.value = '';
+    email.value = '';
+    message.value = '';
 }
 
 // Remove parent onclick from child
