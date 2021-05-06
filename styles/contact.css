@@ -246,6 +246,42 @@ div.form-container.active {
     div.form-container > form {
         width: 200px;
     }
+    div.form-container > div.title {
+        font-size: calc(35 * ((250vw - 35px) / (1440 - 42))) !important;
+    }
+}
+
+@media(max-height: 600px) {
+    div.form-container > form > div.input-container > input, textarea {
+        font-size:large;
+    }
+    div.form-container > form > div.input-container > textarea {
+        min-height: 0;
+        height: 15vw;
+    }
+    div.form-container > form > button {
+        font-size: 1rem;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media(max-height: 455px) {
+    div.form-container > form > div.input-container > input {
+        height: 1vw;
+    }
+    div.form-container > form > div.input-container > textarea {
+        height: 10vw;
+    }
+    div.form-container > form > button {
+        font-size: 0.7rem;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
 }
 
 @keyframes showFormContainer {

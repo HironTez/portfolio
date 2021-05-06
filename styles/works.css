@@ -157,3 +157,11 @@ div.no-work {
     div.no-work > p:nth-child(1) {
         color: rgb(231, 51, 124);
     }
+
+
+@media(max-width: 600px) {
+    div.work {
+        width: calc(500 * ((100vw - 20px) / (1440 - 42)));
+        height: calc((500 * ((100vw - 20px) / (1440 - 42))) / 100 * 70);
+    }
+}

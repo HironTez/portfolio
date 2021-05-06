@@ -173,6 +173,7 @@
 @media(max-width: 530px) {
     .line__label {
         width: min-content;
+        font-size: calc(70 * ((90vw - 42px) / (1440 - 42)));
     }
 }
 @keyframes anim-chart-column-open {

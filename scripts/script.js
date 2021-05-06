@@ -129,13 +129,13 @@ function showForm() {
 // Hide contact form
 function closeForm() {
     let formContainer = $('div.form-container')[0];
-    formContainer.animate({
-        opacity: 0
-    }, 500);
     setTimeout(() => {    
         formContainer.classList.remove('active');
         $('body').css('top', -(document.documentElement.scrollTop) + 'px').removeClass('noscroll');
         $('html, body').scrollTop(currentPagePosition);
+    }, 500);
+    formContainer.animate({
+        opacity: 0
     }, 500);
 }
 
