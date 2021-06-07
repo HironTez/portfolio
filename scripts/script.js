@@ -198,5 +198,12 @@ $('.noParentClick').click(function(event){
 });
 
 
+setTimeout(() => {
+    const line = $('.line')[0];
+    const background = getComputedStyle(line).background.split(')')[0] + ')';
+    if (background != 'rgba(238, 238, 238, 0.6)') alert('Please turn off dark mode for better experience.');
+}, 1000);
+
+
 // Initialize AOS
 AOS.init();
