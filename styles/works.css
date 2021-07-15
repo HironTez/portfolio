@@ -44,15 +44,23 @@ div.work {
     }
 
     div.works--tab:nth-child(1) > div.work:nth-child(1) {
-        background-image: url(/portfolio/images/projects/Rubiks-Cube.png);
+        background-image: url(../images/projects/modeling-and-sewing.png);
+    }
+
+    div.works--tab:nth-child(1) > div.work:nth-child(2) {
+        background-image: url(../images/projects/Rubiks-Cube.png);
+    }
+
+    div.works--tab:nth-child(1) > div.work:nth-child(3) {
+        background-image: url(../images/projects/Trello-clone.png);
     }
 
     div.works--tab:nth-child(2) > div.work:nth-child(1) {
-        background-image: url(/portfolio/images/projects/mediaplayer.png);
+        background-image: url(../images/projects/mediaplayer.png);
     }
 
     div.works--tab:nth-child(2) > div.work:nth-child(2) {
-        background-image: url(/portfolio/images/projects/folder.png);
+        background-image: url(../images/projects/folder.png);
     }
 
     div.work > div.text {
@@ -78,6 +86,11 @@ div.work {
     div.work > div.text > div.technologies {
         font-size: calc(10px + (13 - 10) * ((100vw - 42px) / (466 - 42)));
         color: rgb(231, 51, 124);
+    }
+
+    div.work > div.text > div.type {
+        font-size: calc(7px + (10 - 7) * ((100vw - 42px) / (466 - 42)));
+        color: rgb(181, 51, 231);
     }
 
     div.work > div.buttons {

@@ -129,7 +129,7 @@ div.form-container.active {
                 }
 
                 div.form-container > form > div.input-container > textarea::-webkit-resizer {
-                    background-image: url(/portfolio/images/resizer.png);
+                    background-image: url(../images/resizer.png);
                     background-size: contain;
                     background-position: center;
                     background-repeat: no-repeat;
