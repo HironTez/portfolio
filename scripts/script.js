@@ -111,6 +111,15 @@ function changeTab(index, identifyingClass) {
     let targetChooseTab = $(`div.choose.${identifyingClass}`)[index];
     replaceClass(activeChooseTab, 'active', 'inactive');
     replaceClass(targetChooseTab, 'inactive', 'active');
+
+    let worksOnTargetTab = $('div.works--tab.works.active > div.work');
+
+    for (let work of worksOnTargetTab) {
+        work.classList.remove('aos-animate')
+    }
+
+    // Refresh AOS
+    AOS.refresh();
 }
 
 // Redirect to another page
