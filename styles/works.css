@@ -68,6 +68,13 @@ div.work {
         background-image: url(../images/projects/folder.png);
     }
 
+    div.works--tab:nth-child(3) > div.work:nth-child(1) {
+        background-image: url(../images/projects/Rubiks-Cube.png);
+    }
+    div.works--tab:nth-child(3) > div.work:nth-child(2) {
+        background-image: url(../images/projects/spaceship.png);
+    }
+
     div.work > div.text {
         position: absolute;
         left: 0;
