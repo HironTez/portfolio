@@ -269,6 +269,9 @@ div.form-container.active {
 }
 
 @media(max-height: 455px) {
+    div.form-container > div.title {
+        font-size: calc(35 * ((200vw - 35px) / (1440 - 42))) !important;
+    }
     div.form-container > form > div.input-container > input {
         height: 1vw;
     }
@@ -292,7 +295,7 @@ div.form-container.active {
         font-size: 0.7rem;
     }
     div.form-container > div.title {
-        font-size: calc(25 * ((250vw - 35px) / (1440 - 42))) !important;
+        font-size: calc(40 * ((100vw - 40px) / (1440 - 100))) !important;
     }
     div.form-container > form {
         transform: translate(-50%, -15%);

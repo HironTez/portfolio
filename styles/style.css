@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@200;300&display=swap');
+
+
 html, body {
     margin: 0%;
     width: 100%;
     color: rgb(210, 206, 200);
+    font-family: 'Exo 2', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -76,6 +80,7 @@ div.header {
     -moz-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     -o-transform: translate(-50%, 0);
+    padding-bottom: 20px;
 }
     div.header-arrow-container {
         position: absolute;
@@ -157,10 +162,6 @@ div.header {
         -ms-transition: all 0.5s ease-in-out;
         -o-transition: all 0.5s ease-in-out;
     }
-    .choose-container>div.choose:hover {
-        color: white;
-        cursor: pointer;
-    }
     .choose-container>div.choose.active {
         color: white;
     }
@@ -177,6 +178,10 @@ div.header {
     }
     .choose-container>div.choose.inactive {
         color: rgb(173, 173, 173);
+    }
+    .choose-container>div.choose:hover {
+        cursor: pointer;
+        color: white;
     }
 
 /* Styles for first section */
