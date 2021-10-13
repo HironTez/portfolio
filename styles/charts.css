@@ -1,13 +1,13 @@
 .charts-container {
     width: 80%;
     max-width: 960px;
-    height: 380px;
+    height: 420px;
     margin: auto;
     position: relative;
 }
     /* Styles for lines */
     .lines {
-        height: 345px;
+        height: 385px;
         position: relative;
     }
     .line {
@@ -169,6 +169,8 @@
         line-height: 30px;
         color: white;
     }
+    
+
     
 @media(max-width: 530px) {
     .line__label {

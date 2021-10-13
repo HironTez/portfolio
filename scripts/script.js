@@ -138,7 +138,7 @@ function showForm() {
 // Hide contact form
 function closeForm() {
     let formContainer = $('div.form-container')[0];
-    setTimeout(() => {    
+    setTimeout(() => {
         formContainer.classList.remove('active');
         $('body').css('top', -(document.documentElement.scrollTop) + 'px').removeClass('noscroll');
         $('html, body').scrollTop(currentPagePosition);
@@ -150,22 +150,24 @@ function closeForm() {
 
 // Animate close button of contact form
 function closeButtonAnimation() {
-    let button = $('div.form.close')[0];
-    button.animate({
-        opacity: 1,
-        transform: 'scale(2)',
-        '-webkit-transform': 'scale(2)',
-        '-moz-transform': 'scale(2)',
-        '-ms-transform': 'scale(2)',
-        '-o-transform': 'scale(2)'
-    }, 100);
-    button.animate({
-        transform: 'scale(1)',
-        '-webkit-transform': 'scale(1)',
-        '-moz-transform': 'scale(1)',
-        '-ms-transform': 'scale(1)',
-        '-o-transform': 'scale(1)'
-    }, 100);
+    let buttons = $('div.close');
+    for (const button of buttons) {
+        button.animate({
+            opacity: 1,
+            transform: 'scale(2)',
+            '-webkit-transform': 'scale(2)',
+            '-moz-transform': 'scale(2)',
+            '-ms-transform': 'scale(2)',
+            '-o-transform': 'scale(2)'
+        }, 100);
+        button.animate({
+            transform: 'scale(1)',
+            '-webkit-transform': 'scale(1)',
+            '-moz-transform': 'scale(1)',
+            '-ms-transform': 'scale(1)',
+            '-o-transform': 'scale(1)'
+        }, 100);
+    }
 }
 
 // Submit form without redirect
@@ -199,6 +201,40 @@ function showSuccesMessage() {
     name.value = '';
     email.value = '';
     message.value = '';
+}
+
+// Show 3D model preview
+function show3DModelPreview(src) {
+    // Disable page scroll
+    currentPagePosition = window.pageYOffset;
+    $('body').css('top', -(document.documentElement.scrollTop) + 'px').addClass('noscroll');
+
+    // Create new element
+    const model = $(`<model-viewer src="${src}" alt="A 3D model of an astronaut" ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate camera-controls></model-viewer>`);
+    model.css('opacity', '0')
+    const closeButton = $('<div class="close" onclick="close3DModelPreview(); closeButtonAnimation();"></div>');
+    model.append(closeButton);
+    $("body").append(model);
+
+    // Animation
+    model.animate({
+        opacity: 1
+    }, 500)
+}
+
+// Close 3D model preview
+function close3DModelPreview() {
+    const model = $('model-viewer');
+    model.animate({
+        opacity: 0
+    }, {
+        duration: 500,
+        complete: () => {
+            model.remove();
+            $('body').css('top', -(document.documentElement.scrollTop) + 'px').removeClass('noscroll');
+            $('html, body').scrollTop(currentPagePosition);
+        }
+    })
 }
 
 // Remove parent onclick from child

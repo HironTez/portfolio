@@ -190,4 +190,8 @@ div.no-work {
         width: calc(500 * ((100vw - 20px) / (1440 - 42)));
         height: calc((500 * ((100vw - 20px) / (1440 - 42))) / 100 * 70);
     }
+
+    section.third-section.container#third-section {
+        padding-bottom: 150px;
+    }
 }

@@ -67,7 +67,7 @@ div.form-container {
     padding-right: 15%;
     padding-top: 4vh;
     padding-bottom: 5%;
-    background-color: rgba(10, 10, 10, 0.959);
+    background-color: rgba(10, 10, 10, 0.96);
 }
 
 div.form-container.active {
@@ -170,58 +170,6 @@ div.form-container.active {
             div.form-container > form > button:hover {
                 background-color: rgb(78, 6, 170);
                 cursor: pointer;
-            }
-
-        div.form-container > div.form.close {
-            position: fixed;
-            right: 5vw;
-            top: 5vh;
-            width: 32px;
-            height: 32px;
-            opacity: 0.3;
-            transition: opacity 0.3s ease;
-            -webkit-transition: opacity 0.3s ease;
-            -moz-transition: opacity 0.3s ease;
-            -ms-transition: opacity 0.3s ease;
-            -o-transition: opacity 0.3s ease;
-        }
-
-            div.form-container > div.form.close:hover {
-                opacity: 1;
-                cursor: pointer;
-            }
-
-            div.form-container > div.form.close:before, div.form-container > div.form.close:after {
-                position: fixed;
-                content: '';
-                height: 33px;
-                width: 2px;
-                background-color: rgb(210, 206, 200);
-                transition: background-color 0.3s ease;
-                -webkit-transition: background-color 0.3s ease;
-                -moz-transition: background-color 0.3s ease;
-                -ms-transition: background-color 0.3s ease;
-                -o-transition: background-color 0.3s ease;
-            }
-
-            div.form-container > div.form.close:hover:before, div.form-container > div.form.close:hover:after{
-                background-color: rgb(78, 6, 170);
-            }
-
-            div.form-container > div.form.close:before {
-                transform: translate(16px, 0) rotate(45deg);
-                -webkit-transform: translate(16px, 0) rotate(45deg);
-                -moz-transform: translate(16px, 0) rotate(45deg);
-                -ms-transform: translate(16px, 0) rotate(45deg);
-                -o-transform: translate(16px, 0) rotate(45deg);
-            }
-
-            div.form-container > div.form.close:after {
-                transform: translate(16px, 0) rotate(-45deg);
-                -webkit-transform: translate(16px, 0) rotate(-45deg);
-                -moz-transform: translate(16px, 0) rotate(-45deg);
-                -ms-transform: translate(16px, 0) rotate(-45deg);
-                -o-transform: translate(16px, 0) rotate(-45deg);
             }
 
 
