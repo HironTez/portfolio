@@ -127,7 +127,7 @@
             Expert
           </span>
         </li>
-      </ul>
+      </ul>a
 
       <div class="charts">
         <div class="chart chart--tab waitScrollPosition" id="technologies">
@@ -228,11 +228,11 @@
       <div class="choose works active" onclick="changeTab(0, 'works');">Sites</div>
       <div class="choose works inactive" onclick="changeTab(1, 'works');">Programs</div>
       <div class="choose works inactive" onclick="changeTab(2, 'works');">Games</div>
-      <div class="choose works inactive" onclick="changeTab(3, 'works');">Chat-bots</div>
+      <div class="choose works inactive" onclick="changeTab(3, 'works');">Bots</div>
       <div class="choose works inactive" onclick="changeTab(4, 'works');">3D models</div>
     </div>
     <div id="works-container">
-      <div class="works--tab active works">
+      <div class="works--tab active works" id="sites">
         <div class="work" data-aos="zoom-in" data-aos-offset="200">
           <div class="mask"></div>
           <div class="text">
@@ -266,7 +266,7 @@
           </div>
         </div>
       </div>
-      <div class="works--tab hidden works">
+      <div class="works--tab hidden works" id="programs">
         <div class="work" data-aos="zoom-in" data-aos-offset="200">
           <div class="mask"></div>
           <div class="text">
@@ -291,7 +291,7 @@
           </div>
         </div>
       </div>
-      <div class="works--tab hidden works">
+      <div class="works--tab hidden works" id="games">
         <div class="work" data-aos="zoom-in" data-aos-offset="200">
           <div class="mask"></div>
           <div class="text">
@@ -314,14 +314,24 @@
             <div class="button github" onclick="redirect('https:/\/github.com/HironTez/Spaceship-game');">Github</div>
           </div>
         </div>
+        <div class="work" data-aos="zoom-in" data-aos-offset="200">
+          <div class="mask"></div>
+          <div class="text">
+            <div class="title">Racing</div>
+            <div class="technologies">C#, Unity</div>
+          </div>
+          <div class="buttons">
+            <div class="button github" onclick="redirect('https:/\/github.com/HironTez/RacingGame');">Github</div>
+          </div>
+        </div>
       </div>
-      <div class="works--tab hidden works">
+      <div class="works--tab hidden works" id="bots">
         <div class="no-work">
           <p>Unfortunately, there is nothing here.</p>
           <p>Look at other tabs or help fill this one by ordering the work in the field below.</p>
         </div>
       </div>
-      <div class="works--tab hidden works">
+      <div class="works--tab hidden works" id="3d-models">
         <div class="work" data-aos="zoom-in" data-aos-offset="200">
           <div class="mask"></div>
           <div class="text">

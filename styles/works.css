@@ -4,7 +4,7 @@ section.third-section.container#third-section {
 
 div.works--tab {
     text-align: center;
-    padding-top: 5%;
+    padding-top: 1%;
 }
 
 div.works--tab.hidden {
@@ -70,6 +70,9 @@ div.work {
     }
     div.works--tab:nth-child(3) > div.work:nth-child(2) {
         background-image: url(../images/projects/spaceship.png);
+    }
+    div.works--tab:nth-child(3) > div.work:nth-child(3) {
+        background-image: url(../images/projects/low_poly_car_model_preview.png);
     }
 
     div.works--tab:nth-child(5) > div.work:nth-child(1) {
