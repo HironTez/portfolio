@@ -1,5 +1,5 @@
 .charts-container {
-    width: 80%;
+    width: 90%;
     max-width: 960px;
     height: 420px;
     margin: auto;
@@ -29,7 +29,7 @@
         left: 75%;
     }
     .line.l--100 {
-        left: calc(100% - 1px);
+        left: 100%;
     }
     .line__label {
         display: block;
@@ -62,18 +62,11 @@
         left: 0;
         z-index: 10;
     }
-    .chart.chart--tab.hidden {
-        position: absolute;
-        display: none;
-    }
     .chart--prod .chart__title {
         animation-delay: 3.3s;
     }
     .chart--design .chart__title {
         animation-delay: 4.5s;
-    }
-    .chart--horiz {
-        overflow: hidden;
     }
     .chart__bar {
         height: 30px;
@@ -82,7 +75,13 @@
         border-bottom-right-radius: 4px;
         opacity: 0;
         overflow: hidden;
+        white-space: nowrap;
         text-overflow: ellipsis;
+    }
+    div.chart.chart--tab {
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
     }
     div.chart.chart--tab.active li.chart__bar {
         animation-name: anim-chart-column-open;
@@ -90,17 +89,18 @@
         animation-timing-function: ease;
         animation-fill-mode: forwards;
     }
-    div.chart.chart--tab:not(.hidden):not(.waitScrollPosition) li.chart__bar {
-        animation-name: anim-chart-column-open;
-        animation-duration: 1s;
-        animation-timing-function: ease;
-        animation-fill-mode: forwards;
-    }
-    div.chart.chart--tab.hide li.chart__bar {
+    div.chart.chart--tab.hidden > ul.chart--horiz {
         animation-name: anim-chart-column-close;
         animation-duration: 1s;
         animation-timing-function: ease;
         animation-fill-mode: forwards;
+        opacity: 1;
+    }
+    ul.chart--horiz {
+        padding-inline-start: 5%;
+    }
+    div.chart.chart--tab.hidden li.chart__bar {
+        opacity: 1;
     }
     .chart--tab .chart__bar:nth-of-type(11) {
         animation-delay: 2s;
@@ -172,45 +172,42 @@
     
 
     
-@media(max-width: 530px) {
+@media(max-width: 600px) {
     .line__label {
         width: min-content;
-        font-size: calc(70 * ((90vw - 42px) / (1440 - 42)));
+        font-size: calc(13px + (30 - 13) * ((100vw - 320px) / (1440 - 320)));
+    }
+    .chart__label {
+        font-size: calc(50 * ((80vw - 50px) / (1440 - 80)));
+    }
+    li.line {
+        width: 1px;
     }
 }
 @keyframes anim-chart-column-open {
-    0% {
+    from {
         transform: translateX(-200%);
-        opacity: 1;
+        opacity: 0;
         -webkit-transform: translateX(-200%);
         -moz-transform: translateX(-200%);
         -ms-transform: translateX(-200%);
         -o-transform: translateX(-200%);
     }
-    100% {
-        transform: translateX(0);
+    to {
         opacity: 1;
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
     }
 }
 @keyframes anim-chart-column-close {
-    0% {
-        transform: translateX(0);
+    from {
         opacity: 1;
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
     }
-    100% {
+    to {
+        opacity: 0;
         transform: translateX(-200%);
-        opacity: 1;
         -webkit-transform: translateX(-200%);
         -moz-transform: translateX(-200%);
         -ms-transform: translateX(-200%);
         -o-transform: translateX(-200%);
+        display: none;
     }
 }

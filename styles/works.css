@@ -1,5 +1,5 @@
 section.third-section.container#third-section {
-    min-height: 400px;
+    /* min-height: 400px; */
 }
 
 div.works--tab {
@@ -12,18 +12,19 @@ div.works--tab.hidden {
 }
 
 div.work {
-    background-color: rgb(39, 40, 41);
     width: calc(330 * ((100vw - 42px) / (1440 - 42)));
     height: calc((330 * ((100vw - 42px) / (1440 - 42))) / 100 * 70);
     border-radius: 2%;
-    padding: 3%;
+    padding: 1%;
     margin: 0.1%;
     display: inline-block;
     position: relative;
     overflow: hidden;
+    background-color: rgb(39, 40, 41);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    background-origin: content-box;
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -185,13 +186,26 @@ div.no-work {
     }
 
 
-@media(max-width: 600px) {
+@media(max-width: 880px) {
+    section.third-section.container#third-section {
+        min-height: 320px;
+    }
+}
+
+@media(max-width: 800px) {
+    section.third-section.container#third-section {
+        min-height: calc(500 * ((300vw - 500px) / (1440 - 42)));
+    }
+
     div.work {
         width: calc(500 * ((100vw - 20px) / (1440 - 42)));
         height: calc((500 * ((100vw - 20px) / (1440 - 42))) / 100 * 70);
     }
+}
+
+@media(max-width: 600px) {
 
     section.third-section.container#third-section {
-        padding-bottom: 150px;
+        padding-bottom: 80px;
     }
 }

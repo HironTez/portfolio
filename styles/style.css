@@ -409,6 +409,35 @@ model-viewer {
     background-color: rgba(10, 10, 10, 0.959);
 }
 
+/* Notiffictions popup */
+.popup {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    width: min(50vW, 50vh);
+    height: min(10vW, 10vh);
+    background-color: rgba(88, 6, 193, 0.75);
+    border-radius: max(2vw, 2vh);
+    -webkit-border-radius: max(2vw, 2vh);
+    -moz-border-radius: max(2vw, 2vh);
+    -ms-border-radius: max(2vw, 2vh);
+    -o-border-radius: max(2vw, 2vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.51);
+    font-size: calc(15px + (40 - 15) * ((min(100vw, 100vh) - 320px) / (1440 - 320)));
+    z-index: 10;
+    opacity: 0;
+}
+
 
 
 @media screen and (max-width: 467px) {

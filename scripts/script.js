@@ -240,14 +240,36 @@ function close3DModelPreview() {
 // Remove parent onclick from child
 $('.noParentClick').click(function(event){
     event.stopPropagation();
-});
+})
 
+const showPopup = (text, duration=3000) => {
+    const popup = $(`<div class="popup">${text}</div>`) // Create a new element
+    $(document.body).append(popup) // Add it to the HTML
+    const animationDuration = Math.min(duration / 3, 1000);
+    const shownDuration = duration - animationDuration * 2;
+    popup.animate({opacity: 1}, animationDuration) // Shown animation
+    setTimeout(() => { // After 3 sec
+        popup.animate({opacity: 0}, { // Hiding animation
+            duration: animationDuration,
+            complete: () => { // On animation complete
+                popup.remove() // Remove the element from HTML
+            }
+        })
+    }, shownDuration);
+}
 
-setTimeout(() => {
-    const line = $('.line')[0];
-    const background = getComputedStyle(line).background.split(')')[0] + ')';
-    if (background != 'rgba(238, 238, 238, 0.6)') alert('Please turn off dark mode for better experience.');
-}, 1000);
+function detectGlobalDarkMode() {
+    const chartsLinesColor = getComputedStyle($('.line')[0]).background.split(')')[0] + ')'; // Get the color of chart background lines
+    const isEdgeChromium = navigator.userAgent.includes('Edg');
+    const notified = localStorage.getItem('notifiedAboutDarkMode'); // Check if a popup was shown
+
+    if (!notified && ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !isEdgeChromium) || chartsLinesColor != 'rgba(238, 238, 238, 0.6)')) { // Check if dark mode enabled
+        showPopup('Please turn off forced dark mode for better experience.', 8000); // Show poppup
+        localStorage.setItem('notifiedAboutDarkMode', 'true'); // Make an entry
+    }
+}
+
+setTimeout(detectGlobalDarkMode, 1000);
 
 
 // Initialize AOS

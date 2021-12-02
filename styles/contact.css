@@ -190,9 +190,31 @@ div.form-container.active {
     }
 }
 
+@media(max-width: 700px) {
+    div.sentence.order {
+        padding: 5% 3%;
+    }
+    div.title.order {
+        font-size: calc(25 * ((200vw - 25px) / (1440 - 42))) !important;
+    }
+    div.text.order {
+        font-size: calc(20 * ((200vw - 20px) / (1440 - 42))) !important;
+    }
+    div.button.order {
+        font-size: calc(20 * ((200vw - 20px) / (1440 - 42))) !important;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        max-width: 40vw;
+    }
+}
+
 @media(max-width: 520px) {
-    div.form-container > form {
-        width: 200px;
+    div.form-container > form, div.form-container > form > button {
+        width: calc(100 * ((1000vw - 100px) / (1440 - 42)));
+        padding-left: 0;
+        padding-right: 0;
     }
     div.form-container > div.title {
         font-size: calc(35 * ((250vw - 35px) / (1440 - 42))) !important;
