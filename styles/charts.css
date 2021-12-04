@@ -83,6 +83,10 @@
         position: absolute;
         width: 100%;
     }
+    div.chart.chart--tab li.chart__bar {
+        background: linear-gradient(180deg, rgba(88, 6, 193, 1) 19%, rgba(6, 129, 193, 1) 60%, rgba(0, 212, 255, 1) 100%);
+        background-attachment: fixed;
+    }
     div.chart.chart--tab.active li.chart__bar {
         animation-name: anim-chart-column-open;
         animation-duration: 1s;
@@ -102,49 +106,36 @@
     div.chart.chart--tab.hidden li.chart__bar {
         opacity: 1;
     }
-    .chart--tab .chart__bar:nth-of-type(11) {
-        animation-delay: 2s;
-        background-color: #15e854;
-    }
     .chart--tab .chart__bar:nth-of-type(10) {
         animation-delay: 1.8s;
-        background-color: #15e874;
     }
     .chart--tab .chart__bar:nth-of-type(9) {
         animation-delay: 1.6s;
-        background-color: #15e8a2;
     }
     .chart--tab .chart__bar:nth-of-type(8) {
         animation-delay: 1.4s;
-        background-color: #159be8;
     }
     .chart--tab .chart__bar:nth-of-type(7) {
         animation-delay: 1.2s;
-        background-color: #1571e8;
     }
     .chart--tab .chart__bar:nth-of-type(6) {
         animation-delay: 1s;
-        background-color: #153ce8;
     }
     .chart--tab .chart__bar:nth-of-type(5) {
         animation-delay: 0.8s;
-        background-color: #2E15E8;
     }
     .chart--tab .chart__bar:nth-of-type(4) {
         animation-delay: 0.6s;
-        background-color: #6D16F2;
     }
     .chart--tab .chart__bar:nth-of-type(3) {
         animation-delay: 0.4s;
-        background-color: #9C1FDB;
     }
     .chart--tab .chart__bar:nth-of-type(2) {
         animation-delay: 0.2s;
-        background-color: #E516F2;
+        background-color: #5E1CC7;
     }
     .chart--tab .chart__bar:nth-of-type(1) {
         animation-delay: 0s;
-        background-color: #E81596;
     }
     .chart--prod .chart__bar:nth-of-type(2) {
         animation-delay: 4.2s;

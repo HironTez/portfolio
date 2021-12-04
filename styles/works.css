@@ -99,7 +99,7 @@ div.work {
 
     div.work > div.text > div.technologies {
         font-size: calc(10px + (13 - 10) * ((100vw - 42px) / (466 - 42)));
-        color: rgb(231, 51, 124);
+        color: rgb(88, 6, 193);
     }
 
     div.work > div.text > div.type {
@@ -132,7 +132,7 @@ div.work {
             width: calc(10px + (40 - 10) * ((100vw - 42px) / (466 - 42)));
             height: calc(10px + (15 - 10) * ((100vw - 42px) / (466 - 42)));
             color: rgb(210, 206, 200);
-            border: 2px solid rgb(231, 51, 124);
+            border: 2px solid rgb(88, 6, 193);
             background: none;
             padding: 1px 6px;
             transition: all 0.5s ease;
@@ -148,7 +148,7 @@ div.work {
         }
 
         div.work > div.buttons > div.button:hover {
-            background-color: rgb(231, 51, 124);
+            background-color: rgb(88, 6, 193);
             cursor: pointer;
         }
 
@@ -182,7 +182,7 @@ div.no-work {
     }
 
     div.no-work > p:nth-child(1) {
-        color: rgb(231, 51, 124);
+        color: rgb(88, 6, 193);
     }
 
 

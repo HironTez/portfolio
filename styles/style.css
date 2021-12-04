@@ -12,9 +12,11 @@ html, body {
     background-color: rgb(32, 35, 36);
     width: 1.05em;
 }
-
 ::-webkit-scrollbar-thumb {
     background-color: rgb(69, 74, 77);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(87,94,98);
 }
 
 input:focus, textarea:focus, select:focus, button:focus{
@@ -230,7 +232,7 @@ div.header {
             }
             
             #button-more:hover {
-                background-color: rgb(40, 85, 105);
+                background-color: rgb(88, 6, 193);
                 cursor: pointer;
             }
 
@@ -309,7 +311,7 @@ div.header {
         animation-timing-function: ease;
     }
     #pre-header  >div:hover {
-        color: rgb(215, 49, 117);
+        color: rgb(88, 6, 193);
         cursor: pointer;
     }
 
@@ -342,7 +344,7 @@ div.header {
 
 .noscroll {
     position: fixed;
-    overflow-y:scroll;
+    overflow-y: scroll;
 }
 
 /* Styles for close button */
@@ -455,12 +457,12 @@ model-viewer {
         color: rgb(210, 206, 200);
     }
     100% {
-        color: rgb(215, 49, 117);
+        color: rgb(88, 6, 193);
     }
 }
 @keyframes pre-header-inactivate-elem {
     0% {
-        color: rgb(215, 49, 117);
+        color: rgb(88, 6, 193);
     }
     100% {
         color: rgb(210, 206, 200);

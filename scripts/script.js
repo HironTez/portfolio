@@ -21,9 +21,10 @@ window.onload = functionsForStartsOnScrollOrLoadPage();
 // Fixed pre-header
 function fixingTheHeader() {
     if (window.pageYOffset > preHeaderTop + 3) {
-        preHeader.classList.add("fixed");
+        preHeader.classList.add("fixed"); // Fix
     } else {
-        preHeader.classList.remove("fixed");
+        preHeader.classList.remove("fixed"); // Unfix
+        AOS.refresh(); // Refresh AOS
     }
 }
 
@@ -48,7 +49,7 @@ function scrollToPos(pos=0) {
 function scrollToElem(elem) {
     let posToScroll;
     if (elem.offsetTop <= preHeaderTop) {
-        posToScroll = elem.offsetTop;
+        posToScroll = elem.offsetTop + 1;
     }
     else if (elem.offsetTop > preHeaderTop + 42){
         posToScroll = elem.offsetTop - 42;
