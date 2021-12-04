@@ -33,7 +33,7 @@ function changeClassOnScrollPosition() {
     for (let element of elementsWaitScrollPosition) {
         let pos = window.pageYOffset + (window.innerHeight / 100 * 80);
         let elemPos = element.getBoundingClientRect().top + pageYOffset;
-        if (pos >= elemPos) {
+        if (pos >= elemPos && !element.classList.contains('hidden')) {
             element.classList.remove('waitScrollPosition');
             element.classList.add('active');
         }
@@ -116,7 +116,7 @@ function changeTab(index, identifyingClass) {
     let worksOnTargetTab = $('div.works--tab.works.active > div.work');
 
     for (let work of worksOnTargetTab) {
-        work.classList.remove('aos-animate')
+        work.classList.remove('aos-animate');
     }
 
     // Refresh AOS
