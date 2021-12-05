@@ -195,7 +195,7 @@ function submitForm() {
 
 // Show message if form was submit
 function showSuccesMessage() {
-    alert('Thank you for message! I will gladly answer you shortly.');
+    showPopup('Thank you for message! I will gladly answer you shortly.', 8000);
     let name = $('input.name')[0];
     let email = $('input.replyto')[0];
     let message = $('textarea.message')[0];
@@ -243,7 +243,7 @@ $('.noParentClick').click(function(event){
     event.stopPropagation();
 })
 
-const showPopup = (text, duration=3000) => {
+const showPopup = (text, duration=5000) => {
     const popup = $(`<div class="popup">${text}</div>`) // Create a new element
     $(document.body).append(popup) // Add it to the HTML
     const animationDuration = Math.min(duration / 3, 1000);
