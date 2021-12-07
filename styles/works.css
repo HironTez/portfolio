@@ -73,7 +73,7 @@ div.work {
         background-image: url(../images/projects/low_poly_car_model_preview.png);
     }
 
-    div.works--tab:nth-child(5) > div.work:nth-child(1) {
+    div.works--tab:nth-child(4) > div.work:nth-child(1) {
         background-image: url(../images/projects/low_poly_car_model_preview.png);
     }
 
