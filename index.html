@@ -21,6 +21,7 @@
 </head>
 
 <body>
+  <!-- Header -->
   <div id="header">
     <div id="everything-in-header">
       <div id="logo">
@@ -29,6 +30,7 @@
       </div>
     </div>
   </div>
+  <!-- About/intro -->
   <section class="first-section container" id="first-section">
     <div id="pt" class="space-parent">
       <canvas id="space"></canvas>
@@ -77,6 +79,7 @@
       </div>
     </div>
   </section>
+  <!-- Pre header (navigation) -->
   <div id="pre-header" data-aos="fade-right">
     <div onclick="scrollToPos(0);" class="active">
       Home
@@ -88,6 +91,7 @@
       Projects
     </div>
   </div>
+  <!-- Skills -->
   <section class="second-section container" id="second-section">
     <div class="header">
       Skills
@@ -216,6 +220,7 @@
       </div>
     </div>
   </section>
+  <!-- Portfolio -->
   <section class="third-section container" id="third-section">
     <div class="header">
       My works
@@ -228,8 +233,8 @@
       <div class="choose works active" onclick="changeTab(0, 'works');">Sites</div>
       <div class="choose works inactive" onclick="changeTab(1, 'works');">Programs</div>
       <div class="choose works inactive" onclick="changeTab(2, 'works');">Games</div>
-      <!-- <div class="choose works inactive" onclick="changeTab(3, 'works');">Bots</div> -->
-      <div class="choose works inactive" onclick="changeTab(3, 'works');">3D models</div>
+      <div class="choose works inactive" onclick="changeTab(3, 'works');">Bots</div>
+      <div class="choose works inactive" onclick="changeTab(4, 'works');">3D models</div>
     </div>
     <div id="works-container">
       <div class="works--tab active works" id="sites">
@@ -314,12 +319,22 @@
           </div>
         </div>
       </div>
-      <!-- <div class="works--tab hidden works" id="bots">
-        <div class="no-work">
+      <div class="works--tab hidden works" id="bots">
+        <div class="work" data-aos="zoom-in" data-aos-offset="200">
+          <div class="mask"></div>
+          <div class="text">
+            <div class="title">Telegram web parser</div>
+            <div class="technologies">Python, Aiogram,<br>Telegram API</div>
+          </div>
+          <div class="buttons">
+            <div class="button" onclick="createInfoMessage('Bot/site parser. Sends notification of new publications to subscribers.', this);">Details</div>
+          </div>
+        </div>
+        <!-- <div class="no-work">
           <p>Unfortunately, there is nothing here.</p>
           <p>Look at other tabs or help fill this one by ordering the work in the field below.</p>
-        </div>
-      </div> -->
+        </div> -->
+      </div>
       <div class="works--tab hidden works" id="3d-models">
         <div class="work" data-aos="zoom-in" data-aos-offset="200">
           <div class="mask"></div>
@@ -334,9 +349,10 @@
       </div>
     </div>
   </section>
+  <!-- Contact -->
   <div class="contact">
-    <div class="form-container" onclick="closeForm(); closeButtonAnimation();">
-      <div class="form close" onclick="closeButtonAnimation();"></div>
+    <div class="form-container" onclick="closeForm();">
+      <div class="form close" onclick="closeButtonAnimation(this);"></div>
       <div class="title noParentClick">I’m excited to learn about your project and answer all your questions. Ready to
         get started?</div>
       <form class="noParentClick">
@@ -357,13 +373,14 @@
     </div>
 
     <div class="sentence order">
-      <div class="title order" data-aos="zoom-in-right" data-aos-duration="500" data-aos-offset="50">Start a project</div>
-      <div class="text order" data-aos="zoom-in" data-aos-duration="500" data-aos-offset="50">Interested in working together?<br>Write your
+      <div class="title order" data-aos="zoom-in-right" data-aos-duration="500" data-aos-offset="40">Start a project</div>
+      <div class="text order" data-aos="zoom-in" data-aos-duration="500" data-aos-offset="40">Interested in working together?<br>Write your
         suggestions or questions.</div>
-      <div class="button order" onclick="showForm();" data-aos="zoom-in-left" data-aos-duration="500" data-aos-offset="50">Let's do this
+      <div class="button order" onclick="showForm();" data-aos="zoom-in-left" data-aos-duration="500" data-aos-offset="40">Let's do this
       </div>
     </div>
   </div>
+  <!-- Footer -->
   <section class="fourth-section container" id="four-section">
     <div class="container in-bottom-section">
       <div class="logo bottom container">

@@ -1,25 +1,13 @@
 // Global variables
-var preHeader = $("#pre-header")[0];
-var preHeaderTop = preHeader.offsetTop;
-var elementsWaitScrollPosition = $(".waitScrollPosition");
-var sections = $('section');
-var sectionLinks = $('#pre-header').children();
-var formRecentlySubmited = false;
-var currentPagePosition;
-
-// List of functions which will starts when window load and scroll position change
-function functionsForStartsOnScrollOrLoadPage() {
-    fixingTheHeader();
-    changeClassOnScrollPosition();
-    changeActiveSection();
-};
-
-// Connect functions for events
-window.onscroll = functionsForStartsOnScrollOrLoadPage;
-window.onload = functionsForStartsOnScrollOrLoadPage();
+const preHeader = $("#pre-header")[0];
+const preHeaderTop = preHeader.offsetTop;
+const elementsWaitScrollPosition = $(".waitScrollPosition");
+const sections = $('section');
+const sectionLinks = $('#pre-header').children();
+let currentPagePosition;
 
 // Fixed pre-header
-function fixingTheHeader() {
+const fixingTheHeader = () => {
     if (window.pageYOffset > preHeaderTop + 3) {
         preHeader.classList.add("fixed"); // Fix
     } else {
@@ -29,10 +17,10 @@ function fixingTheHeader() {
 }
 
 // Change class for element if scroll to it
-function changeClassOnScrollPosition() {
-    for (let element of elementsWaitScrollPosition) {
-        let pos = window.pageYOffset + (window.innerHeight / 100 * 80);
-        let elemPos = element.getBoundingClientRect().top + pageYOffset;
+const changeClassOnScrollPosition = () => {
+    for (const element of elementsWaitScrollPosition) {
+        const pos = window.pageYOffset + (window.innerHeight / 100 * 80);
+        const elemPos = element.getBoundingClientRect().top + pageYOffset;
         if (pos >= elemPos && !element.classList.contains('hidden')) {
             element.classList.remove('waitScrollPosition');
             element.classList.add('active');
@@ -41,12 +29,12 @@ function changeClassOnScrollPosition() {
 }
 
 // Scroll to position
-function scrollToPos(pos=0) {
+const scrollToPos = (pos=0) => {
     window.scrollTo({'top': pos, 'behavior': 'smooth'});
 }
 
 // Scroll to element
-function scrollToElem(elem) {
+const scrollToElem = (elem) => {
     let posToScroll;
     if (elem.offsetTop <= preHeaderTop) {
         posToScroll = elem.offsetTop + 1;
@@ -61,10 +49,10 @@ function scrollToElem(elem) {
 }
 
 // Change active section to show on pre-header
-function changeActiveSection() {
-    for (let section of sections) {
-        let sectionPos = section.offsetTop;
-        let sectionBottom = sectionPos + section.offsetHeight;
+const changeActiveSection = () => {
+    for (const section of sections) {
+        const sectionPos = section.offsetTop;
+        const sectionBottom = sectionPos + section.offsetHeight;
         let windowPos = window.pageYOffset;
         if (preHeader.classList.contains('fixed')) {windowPos += 42};
         if (sectionPos <= windowPos && windowPos < sectionBottom && !sectionLinks[sections.index(section)].classList.contains('active')) {
@@ -75,7 +63,7 @@ function changeActiveSection() {
 }
 
 // Function for fast replace class of the element
-function replaceClass(object, classBefore, classAfter, list=false, forceAdd=false) {
+const replaceClass = (object, classBefore, classAfter, list=false, forceAdd=false) => {
     if (object != undefined) {
         if (!list && object.classList.contains(classBefore)) {
             object.classList.remove(classBefore);
@@ -85,7 +73,7 @@ function replaceClass(object, classBefore, classAfter, list=false, forceAdd=fals
             object.classList.add(classAfter);
         }
         else if (list) {
-            for (let elem of object) {
+            for (const elem of object) {
                 if (elem.classList.contains(classBefore)) {
                     elem.classList.remove(classBefore);
                     elem.classList.add(classAfter);
@@ -99,23 +87,23 @@ function replaceClass(object, classBefore, classAfter, list=false, forceAdd=fals
 }
 
 // Change active tab
-function changeTab(index, identifyingClass) {
+const changeTab = (index, identifyingClass) => {
     // Change active chart
-    let activeTab = $(`.${identifyingClass}--tab.active.${identifyingClass}`)[0];
-    let targetTab = $(`.${identifyingClass}--tab.${identifyingClass}`)[index];
+    const activeTab = $(`.${identifyingClass}--tab.active.${identifyingClass}`)[0];
+    const targetTab = $(`.${identifyingClass}--tab.${identifyingClass}`)[index];
     if (activeTab != targetTab) {
         replaceClass(activeTab, 'active', 'hidden');
         replaceClass(targetTab, 'hidden', 'active');
     }
     // Change active "choose-tab"
-    let activeChooseTab = $(`div.choose.active.${identifyingClass}`)[0];
-    let targetChooseTab = $(`div.choose.${identifyingClass}`)[index];
+    const activeChooseTab = $(`div.choose.active.${identifyingClass}`)[0];
+    const targetChooseTab = $(`div.choose.${identifyingClass}`)[index];
     replaceClass(activeChooseTab, 'active', 'inactive');
     replaceClass(targetChooseTab, 'inactive', 'active');
 
-    let worksOnTargetTab = $('div.works--tab.works.active > div.work');
+    const worksOnTargetTab = $('div.works--tab.works.active > div.work');
 
-    for (let work of worksOnTargetTab) {
+    for (const work of worksOnTargetTab) {
         work.classList.remove('aos-animate');
     }
 
@@ -124,21 +112,21 @@ function changeTab(index, identifyingClass) {
 }
 
 // Redirect to another page
-function redirect(url) {
+const redirect = (url) => {
     window.location.href = url;
 }
 
 // Show contact form
-function showForm() {
-    let formContainer = $('div.form-container')[0];
+const showForm = () => {
+    const formContainer = $('div.form-container')[0];
     formContainer.classList.add('active');
     currentPagePosition = window.pageYOffset;
     $('body').css('top', -(document.documentElement.scrollTop) + 'px').addClass('noscroll');
 }
 
 // Hide contact form
-function closeForm() {
-    let formContainer = $('div.form-container')[0];
+const closeForm = () => {
+    const formContainer = $('div.form-container')[0];
     setTimeout(() => {
         formContainer.classList.remove('active');
         $('body').css('top', -(document.documentElement.scrollTop) + 'px').removeClass('noscroll');
@@ -150,34 +138,31 @@ function closeForm() {
 }
 
 // Animate close button of contact form
-function closeButtonAnimation() {
-    let buttons = $('div.close');
-    for (const button of buttons) {
-        button.animate({
-            opacity: 1,
-            transform: 'scale(2)',
-            '-webkit-transform': 'scale(2)',
-            '-moz-transform': 'scale(2)',
-            '-ms-transform': 'scale(2)',
-            '-o-transform': 'scale(2)'
-        }, 100);
-        button.animate({
-            transform: 'scale(1)',
-            '-webkit-transform': 'scale(1)',
-            '-moz-transform': 'scale(1)',
-            '-ms-transform': 'scale(1)',
-            '-o-transform': 'scale(1)'
-        }, 100);
-    }
+const closeButtonAnimation = (button) => {
+    button.animate({
+        opacity: 1,
+        transform: 'scale(2)',
+        '-webkit-transform': 'scale(2)',
+        '-moz-transform': 'scale(2)',
+        '-ms-transform': 'scale(2)',
+        '-o-transform': 'scale(2)'
+    }, 100);
+    button.animate({
+        transform: 'scale(1)',
+        '-webkit-transform': 'scale(1)',
+        '-moz-transform': 'scale(1)',
+        '-ms-transform': 'scale(1)',
+        '-o-transform': 'scale(1)'
+    }, 100);
 }
 
 // Submit form without redirect
-function submitForm() {
-    let name = $('input.name')[0].value;
-    let email = $('input.replyto')[0].value;
-    let message = $('textarea.message')[0].value;
+const submitForm = () => {
+    const name = $('input.name')[0].value;
+    const email = $('input.replyto')[0].value;
+    const message = $('textarea.message')[0].value;
     if (email == "" || message == "") return true;
-    let formData = new FormData();
+    const formData = new FormData();
     formData.append('name', name);
     formData.append('_replyto', email);
     formData.append('message', message);
@@ -189,23 +174,23 @@ function submitForm() {
         contentType: false
     });
     closeForm();
-    showSuccesMessage();
+    showSuccessMessage();
     return false;
 }
 
 // Show message if form was submit
-function showSuccesMessage() {
+const showSuccessMessage = () => {
     showPopup('Thank you for message! I will gladly answer you shortly.', 8000);
-    let name = $('input.name')[0];
-    let email = $('input.replyto')[0];
-    let message = $('textarea.message')[0];
+    const name = $('input.name')[0];
+    const email = $('input.replyto')[0];
+    const message = $('textarea.message')[0];
     name.value = '';
     email.value = '';
     message.value = '';
 }
 
 // Show 3D model preview
-function show3DModelPreview(src) {
+const show3DModelPreview = (src) => {
     // Disable page scroll
     currentPagePosition = window.pageYOffset;
     $('body').css('top', -(document.documentElement.scrollTop) + 'px').addClass('noscroll');
@@ -213,7 +198,7 @@ function show3DModelPreview(src) {
     // Create new element
     const model = $(`<model-viewer src="${src}" alt="A 3D model of an astronaut" ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate camera-controls></model-viewer>`);
     model.css('opacity', '0')
-    const closeButton = $('<div class="close" onclick="close3DModelPreview(); closeButtonAnimation();"></div>');
+    const closeButton = $('<div class="close" onclick="close3DModelPreview(); closeButtonAnimation(this);"></div>');
     model.append(closeButton);
     $("body").append(model);
 
@@ -224,7 +209,7 @@ function show3DModelPreview(src) {
 }
 
 // Close 3D model preview
-function close3DModelPreview() {
+const close3DModelPreview = () => {
     const model = $('model-viewer');
     model.animate({
         opacity: 0
@@ -244,33 +229,79 @@ $('.noParentClick').click(function(event){
 })
 
 const showPopup = (text, duration=5000) => {
-    const popup = $(`<div class="popup">${text}</div>`) // Create a new element
-    $(document.body).append(popup) // Add it to the HTML
+    const popup = $(`<div class="popup">${text}</div>`); // Create a new element
+    $(document.body).append(popup); // Add it to the HTML
     const animationDuration = Math.min(duration / 3, 1000);
     const shownDuration = duration - animationDuration * 2;
-    popup.animate({opacity: 1}, animationDuration) // Shown animation
+    popup.animate({opacity: 1}, animationDuration); // Shown animation
     setTimeout(() => { // After 3 sec
-        popup.animate({opacity: 0}, { // Hiding animation
+        popup.animate({ // Hiding animation
+            opacity: 0
+        }, {
             duration: animationDuration,
             complete: () => { // On animation complete
-                popup.remove() // Remove the element from HTML
+                popup.remove(); // Remove the element from HTML
             }
         })
     }, shownDuration);
 }
 
-function detectGlobalDarkMode() {
+const createInfoMessage = (text, elemToPos) => {
+    if ($('div.info-box').length) return;
+    const messageBox = $(`<div class="info-box"><div class="info-message-box"><div class="info-message-container">${text}</div></div><div class="info-close close" onclick="deleteInfoMessage(this); closeButtonAnimation(this);"></div></div>`);
+    if (elemToPos) {
+        const pos = window.pageYOffset + elemToPos.getBoundingClientRect().top - 100;
+        messageBox.css({top: `${pos}px`})
+    }
+    messageBox.css({opacity: 0})
+    $(document.body).append(messageBox);
+    messageBox.animate({
+        opacity: 1
+    }, 100)
+}
+
+const deleteInfoMessage = (button) => {
+    const messageBox = $(button).parent('div.info-box');
+    messageBox.stop(true, true).delay(100).animate({
+        opacity: 0
+    }, {
+        duration: 100,
+        complete: () => {
+            messageBox.remove();
+        }
+    })
+}
+
+const detectGlobalDarkMode = () => {
     const chartsLinesColor = getComputedStyle($('.line')[0]).background.split(')')[0] + ')'; // Get the color of chart background lines
     const isEdgeChromium = navigator.userAgent.includes('Edg');
     const notified = localStorage.getItem('notifiedAboutDarkMode'); // Check if a popup was shown
 
     if (!notified && ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !isEdgeChromium) || chartsLinesColor != 'rgba(238, 238, 238, 0.6)')) { // Check if dark mode enabled
-        showPopup('Please turn off forced dark mode for better experience.', 8000); // Show poppup
+        showPopup('Please turn off forced dark mode for better experience.', 8000); // Show popup
         localStorage.setItem('notifiedAboutDarkMode', 'true'); // Make an entry
     }
 }
 
 setTimeout(detectGlobalDarkMode, 1000);
+
+
+// List of functions which will starts when window loads and scroll position changes
+const onLoad = () => {
+    detectGlobalDarkMode();
+}
+const onScrollOrLoadPage = () => {
+    fixingTheHeader();
+    changeClassOnScrollPosition();
+    changeActiveSection();
+}
+
+// Connect functions for events
+window.onscroll = onScrollOrLoadPage;
+window.onload = () => {
+    onLoad();
+    onScrollOrLoadPage();
+}
 
 
 // Initialize AOS

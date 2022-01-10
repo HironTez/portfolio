@@ -78,7 +78,7 @@ div.form-container.active {
 
     div.form-container > div.title {
         font-weight: 400;
-        font-size: calc(20 * ((250vw - 42px) / (1440 - 42))) !important;
+        font-size: calc(20 * ((220vw - 42px) / (1440 - 42))) !important;
         text-align: center;
         width: 70%;
     }
