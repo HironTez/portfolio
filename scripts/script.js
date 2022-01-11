@@ -257,7 +257,7 @@ const createInfoMessage = (text, elemToPos) => {
     $(document.body).append(messageBox);
     messageBox.animate({
         opacity: 1
-    }, 100)
+    }, 100);
 }
 
 const deleteInfoMessage = (button) => {
