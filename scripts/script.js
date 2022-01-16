@@ -272,24 +272,8 @@ const deleteInfoMessage = (button) => {
     })
 }
 
-const detectGlobalDarkMode = () => {
-    const chartsLinesColor = getComputedStyle($('.line')[0]).background.split(')')[0] + ')'; // Get the color of chart background lines
-    const isEdgeChromium = navigator.userAgent.includes('Edg');
-    const notified = localStorage.getItem('notifiedAboutDarkMode'); // Check if a popup was shown
 
-    if (!notified && ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !isEdgeChromium) || chartsLinesColor != 'rgba(238, 238, 238, 0.6)')) { // Check if dark mode enabled
-        showPopup('Please turn off forced dark mode for better experience.', 8000); // Show popup
-        localStorage.setItem('notifiedAboutDarkMode', 'true'); // Make an entry
-    }
-}
-
-setTimeout(detectGlobalDarkMode, 1000);
-
-
-// List of functions which will starts when window loads and scroll position changes
-const onLoad = () => {
-    detectGlobalDarkMode();
-}
+// List of functions which will starts when scroll position changes
 const onScrollOrLoadPage = () => {
     fixingTheHeader();
     changeClassOnScrollPosition();
@@ -299,7 +283,6 @@ const onScrollOrLoadPage = () => {
 // Connect functions for events
 window.onscroll = onScrollOrLoadPage;
 window.onload = () => {
-    onLoad();
     onScrollOrLoadPage();
 }
 
