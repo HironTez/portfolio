@@ -24,7 +24,7 @@ section.fourth-section.container {
 
         div.text.bottom {
             font-weight: 300;
-            font-size: 1.5rem !important;
+            font-size: var(--font-size-small);
             width: calc(60% + (25 - 20) * ((100vw - 42px) / (250 - 42)));
             margin: auto;
             padding-top: 2rem;

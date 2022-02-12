@@ -16,7 +16,7 @@ function floatySpace() {
     let count = window.innerWidth * 0.05;
     if (count > 150) count = 150;
     let line = new Line(0, angle).to(space.size.x, 0);
-    let mouse = center.clone();
+    let mouse = center.clone().set(0, 0);
 
     let r = Math.min(space.size.x, space.size.y) * 1;
     for (let i = 0; i < count; i++) {

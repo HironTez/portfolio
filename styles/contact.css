@@ -24,17 +24,17 @@ div.sentence.order {
     }
 
     div.title.order {
-        font-size: 2rem;
+        font-size: var(--font-size-medium-x);
         font-weight: 800;
     }
 
     div.text.order {
-        font-size: 18px;
+        font-size: var(--font-size-small-x);
     }
 
     div.button.order {
         font-weight: 400;
-        font-size: 1.25rem;
+        font-size: var(--font-size-small);
         border: 2px solid rgb(78, 6, 170);
         border-radius: 290486px;
         padding-left: 40px;
@@ -78,7 +78,7 @@ div.form-container.active {
 
     div.form-container > div.title {
         font-weight: 400;
-        font-size: calc(20 * ((220vw - 42px) / (1440 - 42))) !important;
+        font-size: var(--font-size-medium-x);
         text-align: center;
         width: 70%;
     }
@@ -100,7 +100,7 @@ div.form-container.active {
             display: inline-block;
             text-align: left;
             font-weight: 400;
-            font-size: 1.2rem;
+            font-size: var(--font-size-small);
             font-family: "eurostile", sans-serif;
         }
 
@@ -137,7 +137,7 @@ div.form-container.active {
 
             div.form-container > form > div.input-container > input, textarea {
                 margin-top: 8px;
-                font-size: 1.4rem;
+                font-size: var(--font-size-small);
                 border-radius: 4px;
                 background-color: rgb(24,26,27);
                 color: rgb(207, 203, 197);
@@ -149,7 +149,7 @@ div.form-container.active {
 
         div.form-container > form > button {
             font-weight: 400;
-            font-size: 1.25rem;
+            font-size: var(--font-size-medium);
             background-color: transparent;
             color: rgb(210, 206, 200);
             border: 2px solid rgb(78, 6, 170);
@@ -173,9 +173,12 @@ div.form-container.active {
             }
 
 
-@media(max-width: 853px) {
+@media(max-width: 850px) {
     div.form-container > form > div.input-container:nth-child(1), div.form-container > form > div.input-container:nth-child(2) {
         width: 100%;
+    }
+    div.form-container > form > div.input-container:nth-child(2), div.form-container > form > div.input-container:nth-child(3) {
+        padding-top: 18px;
     }
 }
 
@@ -194,14 +197,7 @@ div.form-container.active {
     div.sentence.order {
         padding: 5% 3%;
     }
-    div.title.order {
-        font-size: calc(25 * ((200vw - 25px) / (1440 - 42))) !important;
-    }
-    div.text.order {
-        font-size: calc(20 * ((200vw - 20px) / (1440 - 42))) !important;
-    }
     div.button.order {
-        font-size: calc(20 * ((200vw - 20px) / (1440 - 42))) !important;
         padding-left: 0;
         padding-right: 0;
         padding-top: 10px;
@@ -216,21 +212,14 @@ div.form-container.active {
         padding-left: 0;
         padding-right: 0;
     }
-    div.form-container > div.title {
-        font-size: calc(35 * ((250vw - 35px) / (1440 - 42))) !important;
-    }
 }
 
 @media(max-height: 600px) {
-    div.form-container > form > div.input-container > input, textarea {
-        font-size: large;
-    }
     div.form-container > form > div.input-container > textarea {
         min-height: 0;
         height: 15vw;
     }
     div.form-container > form > button {
-        font-size: 1rem;
         padding-left: 30px;
         padding-right: 30px;
         padding-top: 10px;
@@ -239,9 +228,6 @@ div.form-container.active {
 }
 
 @media(max-height: 455px) {
-    div.form-container > div.title {
-        font-size: calc(35 * ((200vw - 35px) / (1440 - 42))) !important;
-    }
     div.form-container > form > div.input-container > input {
         height: 1vw;
     }
@@ -249,7 +235,6 @@ div.form-container.active {
         height: 10vw;
     }
     div.form-container > form > button {
-        font-size: 0.7rem;
         padding-left: 20px;
         padding-right: 20px;
         padding-top: 7px;
@@ -260,12 +245,6 @@ div.form-container.active {
 @media(max-height: 350px) {
     div.form-container > form > div.input-container > textarea {
         height: 5vw;
-    }
-    div.form-container > form > div.input-container {
-        font-size: 0.7rem;
-    }
-    div.form-container > div.title {
-        font-size: calc(40 * ((100vw - 40px) / (1440 - 100))) !important;
     }
     div.form-container > form {
         transform: translate(-50%, -15%);

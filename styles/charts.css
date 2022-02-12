@@ -7,7 +7,7 @@
 }
     /* Styles for lines */
     .lines {
-        height: 385px;
+        height: 422px;
         position: relative;
     }
     .line {
@@ -166,10 +166,6 @@
 @media(max-width: 600px) {
     .line__label {
         width: min-content;
-        font-size: calc(13px + (30 - 13) * ((100vw - 320px) / (1440 - 320)));
-    }
-    .chart__label {
-        font-size: calc(50 * ((80vw - 50px) / (1440 - 80)));
     }
     li.line {
         width: 1px;

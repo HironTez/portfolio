@@ -8,8 +8,9 @@ div.works--tab.hidden {
 }
 
 div.work {
-    width: calc(330 * ((100vw - 42px) / (1440 - 42)));
-    height: calc((330 * ((100vw - 42px) / (1440 - 42))) / 100 * 70);
+    --size: max(250px, calc(330 * ((100vw - 42px) / (1440 - 42))));
+    width: var(--size);
+    height: calc(var(--size) / 100 * 70);
     border-radius: 2%;
     padding: 1%;
     margin: 0.1%;
@@ -94,16 +95,16 @@ div.work {
     }
 
     div.work > div.text > div.title {
-        font-size: calc(10px + (15 - 10) * ((100vw - 42px) / (466 - 42)));
+        font-size: var(--font-size-medium);
     }
 
     div.work > div.text > div.technologies {
-        font-size: calc(10px + (13 - 10) * ((100vw - 42px) / (466 - 42)));
+        font-size: var(--font-size-small-x);
         color: rgb(88, 6, 193);
     }
 
     div.work > div.text > div.type {
-        font-size: calc(7px + (10 - 7) * ((100vw - 42px) / (466 - 42)));
+        font-size: var(--font-size-small-x);
         color: rgb(181, 51, 231);
     }
 
@@ -129,10 +130,12 @@ div.work {
             align-items: center;
             justify-content: center;
             min-width: fit-content;
-            width: calc(10px + (40 - 10) * ((100vw - 42px) / (466 - 42)));
-            height: calc(10px + (15 - 10) * ((100vw - 42px) / (466 - 42)));
+            --size: max(100px, calc(10px + (40 - 10) * ((100vw - 42px) / (460 - 42))));
+            width: var(--size);
+            height: calc(var(--size) / 100 * 20);
             color: rgb(210, 206, 200);
             border: 2px solid rgb(88, 6, 193);
+            border-radius: 3px;
             background: none;
             padding: 1px 6px;
             transition: all 0.5s ease;
@@ -140,7 +143,11 @@ div.work {
             -moz-transition: all 0.5s ease;
             -ms-transition: all 0.5s ease;
             -o-transition: all 0.5s ease;
-        }
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            -o-border-radius: 3px;
+}
         
         div.work > div.buttons > div.button:focus {
             outline: solid;
@@ -174,7 +181,7 @@ div.work {
     }
 
 div.no-work {
-    font-size: calc(10px + (15 - 10) * ((100vw - 42px) / (466 - 42)));
+    font-size: var(--font-size-default);
 }
 
     div.no-work > p {
@@ -198,8 +205,7 @@ div.no-work {
     }
 
     div.work {
-        width: calc(500 * ((100vw - 20px) / (1440 - 42)));
-        height: calc((500 * ((100vw - 20px) / (1440 - 42))) / 100 * 70);
+        margin-top: 2%;
     }
 }
 

@@ -6,6 +6,12 @@ const sections = $('section');
 const sectionLinks = $('#pre-header').children();
 let currentPagePosition;
 
+
+// Set window size in css variable
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+
 // Fixed pre-header
 const fixingTheHeader = () => {
     if (window.pageYOffset > preHeaderTop + 3) {
@@ -37,7 +43,7 @@ const scrollToPos = (pos=0) => {
 const scrollToElem = (elem) => {
     let posToScroll;
     if (elem.offsetTop <= preHeaderTop) {
-        posToScroll = elem.offsetTop + 1;
+        posToScroll = elem.offsetTop;
     }
     else if (elem.offsetTop > preHeaderTop + 42){
         posToScroll = elem.offsetTop - 42;
@@ -45,7 +51,7 @@ const scrollToElem = (elem) => {
     else if ((elem.offsetTop > preHeaderTop) && (elem.offsetTop < preHeaderTop + 42)){
         posToScroll = preHeaderTop;
     }
-    window.scrollTo({'top': posToScroll, 'left': 0, 'behavior': 'smooth'});
+    window.scrollTo({'top': posToScroll + 1, 'left': 0, 'behavior': 'smooth'});
 }
 
 // Change active section to show on pre-header
