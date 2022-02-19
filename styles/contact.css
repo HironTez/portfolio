@@ -148,14 +148,13 @@ div.form-container.active {
             }
 
         div.form-container > form > button {
-            font-weight: 400;
-            font-size: var(--font-size-medium);
+            font-size: var(--font-size-small);
             background-color: transparent;
             color: rgb(210, 206, 200);
             border: 2px solid rgb(78, 6, 170);
             border-radius: 290486px;
-            padding-left: 40px;
-            padding-right: 40px;
+            padding-left: 50px;
+            padding-right: 50px;
             padding-top: 14px;
             padding-bottom: 14px;
             margin-top: 3vw;
