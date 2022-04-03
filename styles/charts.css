@@ -84,7 +84,7 @@
         width: 100%;
     }
     div.chart.chart--tab li.chart__bar {
-        background: linear-gradient(180deg, rgba(88, 6, 193, 1) 19%, rgba(6, 129, 193, 1) 60%, rgba(0, 212, 255, 1) 100%);
+        background: rgba(88, 6, 193, 1);
         background-attachment: fixed;
     }
     div.chart.chart--tab.active li.chart__bar {
