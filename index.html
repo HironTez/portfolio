@@ -143,17 +143,17 @@
                 JavaScript, TypeScript, Python
               </span>
             </li>
-            <li class="chart__bar" style="width: 65%;">
+            <li class="chart__bar" style="width: 80%;">
               <span class="chart__label">
                 React, Redux, jQuery, Three.JS
               </span>
             </li>
-            <li class="chart__bar" style="width: 75%;">
+            <li class="chart__bar" style="width: 80%;">
               <span class="chart__label">
                 NodeJS, Express, NestJs, Typeorm
               </span>
             </li>
-            <li class="chart__bar" style="width: 70%;">
+            <li class="chart__bar" style="width: 65%;">
               <span class="chart__label">
                 Aiogram, PyTelegramBotApi, Telegram API
               </span>
@@ -168,7 +168,7 @@
                 C#, Unity
               </span>
             </li>
-            <li class="chart__bar" style="width: 50%;">
+            <li class="chart__bar" style="width: 60%;">
               <span class="chart__label">
                 PostgreSQL, SQLite
               </span>
@@ -236,15 +236,28 @@
       <div class="choose works inactive" onclick="changeTab(1, 'works');">Programs</div>
       <div class="choose works inactive" onclick="changeTab(2, 'works');">Games</div>
       <div class="choose works inactive" onclick="changeTab(3, 'works');">Bots</div>
-      <div class="choose works inactive" onclick="changeTab(4, 'works');">3D models</div>
+      <div class="choose works inactive" onclick="changeTab(4, 'works');">Different</div>
     </div>
     <div id="works-container">
       <div class="works--tab active works" id="sites">
         <div class="work" data-aos="zoom-in" data-aos-offset="200">
           <div class="mask"></div>
           <div class="text">
+            <div class="title">Taysteer</div>
+            <div class="technologies">Typescript, React, NestJs, Sass, Jquery</div>
+            <div class="type">Fullstack</div>
+          </div>
+          <div class="buttons">
+            <div class="button visit" onclick="redirect('https:/\/taysteer.herokuapp.com/');">Visit</div>
+            <div class="button github" onclick="redirect('https:/\/github.com/HironTez/Taysteer');">Github</div>
+          </div>
+        </div>
+        <div class="work" data-aos="zoom-in" data-aos-offset="200">
+          <div class="mask"></div>
+          <div class="text">
             <div class="title">Modeling and sewing</div>
             <div class="technologies">JavaScript</div>
+            <div class="type">Static</div>
           </div>
           <div class="buttons">
             <div class="button visit" onclick="redirect('https:/\/liubovmykhalchych.github.io/cv/');">Visit</div>
@@ -325,11 +338,11 @@
         <div class="work" data-aos="zoom-in" data-aos-offset="200">
           <div class="mask"></div>
           <div class="text">
-            <div class="title">Telegram web parser</div>
+            <div class="title">Telegram bot — web parser</div>
             <div class="technologies">Python, Aiogram,<br>Telegram API</div>
           </div>
           <div class="buttons">
-            <div class="button" onclick="createInfoMessage('Bot/site parser. Sends notification of new publications to subscribers.', this);">Details</div>
+            <div class="button" onclick="createInfoMessage('Web parser. Sends notification of new publications to subscribers.', this);">Details</div>
           </div>
         </div>
         <!-- <div class="no-work">
@@ -337,15 +350,26 @@
           <p>Look at other tabs or help fill this one by ordering the work in the field below.</p>
         </div> -->
       </div>
-      <div class="works--tab hidden works" id="3d-models">
+      <div class="works--tab hidden works" id="different">
         <div class="work" data-aos="zoom-in" data-aos-offset="200">
           <div class="mask"></div>
           <div class="text">
             <div class="title">Low poly car</div>
             <div class="technologies">Blender</div>
+            <div class="type">3D model</div>
           </div>
           <div class="buttons">
             <div class="button" onclick="show3DModelPreview('./images/models/car_model.glb');">View</div>
+          </div>
+        </div>
+        <div class="work" data-aos="zoom-in" data-aos-offset="200">
+          <div class="mask"></div>
+          <div class="text">
+            <div class="title">Color contrast theme</div>
+            <div class="type">IDE Theme</div>
+          </div>
+          <div class="buttons">
+            <div class="button" onclick="redirect('https:/\/vscodethemes.com/e/hirontez.color-contrast-theme/color-contrast-dark-bold?language=javascript');">View</div>
           </div>
         </div>
       </div>
