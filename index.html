@@ -25,7 +25,7 @@
   <div id="header">
     <div id="content">
       <div id="logo">
-        <img src="./images/logo.svg" id="logo-icon">
+        <img src="./images/logo.svg" id="logo-icon" alt="logo">
         <p id="logo-title">Hiron Tez</p>
       </div>
     </div>
@@ -38,7 +38,7 @@
     <div class="first" data-aos="zoom-in" data-aos-duration="2000">
       <div>
         <h1>Hiron Tez</h1>
-        <p class="main-text">Hello, i'm IT Developer.</p>
+        <p class="main-text">Hello, i'm IT Developer</p>
         <div id="button-more" onclick="scrollToElem($('section')[1]);">
           More
           <div class="arrow"></div>
@@ -46,33 +46,27 @@
       </div>
     </div>
     </div>
-    <div class="paralax" id="main-image" data-relative-input="true"
-      style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;">
-      <div style="backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;"><img
-          class="main-image-background" src="./images/parallax/background.svg"></div>
-      <div data-depth="0.3" class="first"
-        style="transform: translate3d(26.5px, 5.1px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;">
-        <img class="comp" src="./images/parallax/6.svg">
+    <div class="parallax" id="main-image" data-relative-input="true">
+      <div class="parallax-background">
+        <img class="main-image-background" src="./images/parallax/background.svg" alt="">
       </div>
-      <div data-depth="0.1"
-        style="transform: translate3d(8.8px, 1.7px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;">
-        <img class="main-image-1" src="./images/parallax/1.svg">
+      <div data-depth="0.3" class="parallax-1">
+        <img class="image-1" src="./images/parallax/6.svg" alt="">
       </div>
-      <div data-depth="0.2"
-        style="transform: translate3d(17.7px, 3.4px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;">
-        <img class="main-image-2" src="./images/parallax/2.svg">
+      <div data-depth="0.1" class="parallax-2">
+        <img class="image-2" src="./images/parallax/1.svg" alt="">
       </div>
-      <div data-depth="0.2"
-        style="transform: translate3d(17.7px, 3.4px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;">
-        <img class="main-image-3" src="./images/parallax/3.svg">
+      <div data-depth="0.2" class="parallax-3">
+        <img class="image-3" src="./images/parallax/2.svg" alt="">
       </div>
-      <div data-depth="0.1"
-        style="transform: translate3d(8.8px, 1.7px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;">
-        <img class="main-image-4" src="./images/parallax/4.svg">
+      <div data-depth="0.2" class="parallax-4">
+        <img class="image-4" src="./images/parallax/3.svg" alt="">
       </div>
-      <div data-depth="0.1"
-        style="transform: translate3d(8.8px, 1.7px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;">
-        <img class="main-image-5" src="./images/parallax/5.svg">
+      <div data-depth="0.1" class="parallax-5">
+        <img class="image-5" src="./images/parallax/4.svg" alt="">
+      </div>
+      <div data-depth="0.1" class="parallax-6">
+        <img class="image-6" src="./images/parallax/5.svg" alt="">
       </div>
     </div>
   </section>
@@ -165,7 +159,7 @@
             </li>
             <li class="chart__bar" style="width: 25%;">
               <span class="chart__label">
-                C#, Unity
+                C#, Unity, Java
               </span>
             </li>
             <li class="chart__bar" style="width: 60%;">
@@ -199,7 +193,7 @@
             </li>
             <li class="chart__bar" style="width: 25%;">
               <span class="chart__label">
-                Desighn
+                Design
               </span>
             </li>
             <li class="chart__bar" style="width: 30%;">
@@ -381,17 +375,17 @@
       <form class="noParentClick">
         <div class="input-container">
           Name
-          <input type="text" name="name" class="name">
+          <input type="text" name="name" class="name" placeholder="Enter your name">
         </div>
         <div class="input-container">
           Email *
-          <input type="email" name="_replyto" class="replyto" required>
+          <input type="email" name="_replyto" class="replyto" placeholder="Enter you email" required>
         </div>
         <div class="input-container">
           Message *
-          <textarea name="message" class="message" rows="4" cols="50" required></textarea>
+          <textarea name="message" class="message" rows="4" cols="50" placeholder="Enter you message" required></textarea>
         </div>
-        <button onclick="return submitForm();">Send</button>
+        <button onclick="return submitForm();" type="submit">Send</button>
       </form>
     </div>
 
@@ -407,7 +401,7 @@
   <section class="fourth-section container" id="four-section">
     <div class="container in-bottom-section">
       <div class="logo bottom container">
-        <img src="./images/logo.svg" class="logo bottom">
+        <img src="./images/logo.svg" class="logo bottom" alt="logo">
       </div>
       <div class="text bottom">
         Living, learning and leveling up every day.

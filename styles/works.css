@@ -11,7 +11,6 @@ div.work {
     --size: max(250px, calc(330 * ((100vw - 42px) / (1440 - 42))));
     width: var(--size);
     height: calc(var(--size) / 100 * 70);
-    border-radius: 2%;
     padding: 1%;
     margin: 0.1%;
     display: inline-block;
@@ -22,15 +21,16 @@ div.work {
     background-position: center;
     background-repeat: no-repeat;
     background-origin: content-box;
-    transition: all 1s ease;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -ms-transition: all 1s ease;
     -o-transition: all 1s ease;
+    transition: all 1s ease;
     -webkit-border-radius: 2%;
     -moz-border-radius: 2%;
     -ms-border-radius: 2%;
     -o-border-radius: 2%;
+    border-radius: 2%;
 }
 
     div.work > div.mask {
@@ -39,11 +39,11 @@ div.work {
         position: absolute;
         top: 0;
         left: 0;
-        transition: all 0.5s ease;
         -webkit-transition: all 0.5s ease;
         -moz-transition: all 0.5s ease;
         -ms-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
     }
 
     div.works--tab:nth-child(1) > div.work:nth-child(1) {
@@ -87,16 +87,16 @@ div.work {
         position: absolute;
         left: 0;
         right: 0;
-        transform: translate(0, -200%);
         -webkit-transform: translate(0, -200%);
         -moz-transform: translate(0, -200%);
         -ms-transform: translate(0, -200%);
         -o-transform: translate(0, -200%);
-        transition: all 0.5s ease;
+        transform: translate(0, -200%);
         -webkit-transition: all 0.5s ease;
         -moz-transition: all 0.5s ease;
         -ms-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
     }
 
     div.work > div.text > div.title {
@@ -118,40 +118,42 @@ div.work {
         bottom: 7%;
         left: 0;
         right: 0;
-        transform: translate(0, 300%);
         -webkit-transform: translate(0, 300%);
         -moz-transform: translate(0, 300%);
         -ms-transform: translate(0, 300%);
         -o-transform: translate(0, 300%);
-        transition: all 0.5s ease;
+        transform: translate(0, 300%);
         -webkit-transition: all 0.5s ease;
         -moz-transition: all 0.5s ease;
         -ms-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
     }
 
         div.work > div.buttons > div.button {
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            min-width: -webkit-fill-available;
+            min-width: -moz-fit-content;
             min-width: fit-content;
             --size: max(100px, calc(10px + (40 - 10) * ((100vw - 42px) / (460 - 42))));
             width: var(--size);
             height: calc(var(--size) / 100 * 20);
             color: rgb(210, 206, 200);
             border: 2px solid rgb(88, 6, 193);
-            border-radius: 3px;
             background: none;
             padding: 1px 6px;
-            transition: all 0.5s ease;
             -webkit-transition: all 0.5s ease;
             -moz-transition: all 0.5s ease;
             -ms-transition: all 0.5s ease;
             -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
             -webkit-border-radius: 3px;
             -moz-border-radius: 3px;
             -ms-border-radius: 3px;
             -o-border-radius: 3px;
+            border-radius: 3px;
         }
         
         div.work > div.buttons > div.button:focus {
@@ -170,19 +172,19 @@ div.work {
     }
 
     div.work:hover > div.text {
-        transform: translate(0, 0);
         -webkit-transform: translate(0, 0);
         -moz-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
         -o-transform: translate(0, 0);
+        transform: translate(0, 0);
     }
 
     div.work:hover > div.buttons {
-        transform: translate(0, 0);
         -webkit-transform: translate(0, 0);
         -moz-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
         -o-transform: translate(0, 0);
+        transform: translate(0, 0);
     }
 
 div.no-work {

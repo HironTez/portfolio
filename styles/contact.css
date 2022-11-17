@@ -4,19 +4,19 @@ div.sentence.order {
     display: flex;
     align-items: center;
     text-align: center;
-    border-radius: 15px;
     width: 80%;
     position: absolute;
     left: 50%;
-    transform: translate(-50%, -40%);
     -webkit-transform: translate(-50%, -40%);
     -moz-transform: translate(-50%, -40%);
     -ms-transform: translate(-50%, -40%);
     -o-transform: translate(-50%, -40%);
+    transform: translate(-50%, -40%);
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
+    border-radius: 15px;
 }
 
     div.order:not(.sentence) {
@@ -42,11 +42,11 @@ div.sentence.order {
         padding-top: 14px;
         padding-bottom: 14px;
         max-width: 200px;
-        transition: all 0.5s ease;
         -webkit-transition: all 0.5s ease;
         -moz-transition: all 0.5s ease;
         -ms-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
     }
 
     div.button.order:hover {
@@ -72,8 +72,8 @@ div.form-container {
 
 div.form-container.active {
     display: block;
-    animation: showFormContainer 0.5s ease;
     -webkit-animation: showFormContainer 0.5s ease;
+    animation: showFormContainer 0.5s ease;
 }
 
     div.form-container > div.title {
@@ -89,11 +89,11 @@ div.form-container.active {
         position: inherit;
         left: 50%;
         top: 30%;
-        transform: translate(-50%, 0);
         -webkit-transform: translate(-50%, 0);
         -moz-transform: translate(-50%, 0);
         -ms-transform: translate(-50%, 0);
         -o-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
     }
 
         div.form-container > form > div.input-container {
@@ -159,11 +159,11 @@ div.form-container.active {
             padding-bottom: 14px;
             margin-top: 3vw;
             max-width: 200px;
-            transition: all 0.5s ease;
             -webkit-transition: all 0.5s ease;
             -moz-transition: all 0.5s ease;
             -ms-transition: all 0.5s ease;
             -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
         }
 
             div.form-container > form > button:hover {
@@ -246,11 +246,11 @@ div.form-container.active {
         height: 5vw;
     }
     div.form-container > form {
-        transform: translate(-50%, -15%);
         -webkit-transform: translate(-50%, -15%);
         -moz-transform: translate(-50%, -15%);
         -ms-transform: translate(-50%, -15%);
         -o-transform: translate(-50%, -15%);
+        transform: translate(-50%, -15%);
 }
     div.form-container > form > div.input-container:nth-child(3) {
         padding-top: 5px;
