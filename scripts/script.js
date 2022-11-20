@@ -1,5 +1,5 @@
 // Global variables
-const preHeader = $("#pre-header")[0];
+const preHeader = $("#pre-header").get(0);
 const preHeaderTop = preHeader.offsetTop;
 const elementsWaitScrollPosition = $(".waitScrollPosition");
 const sections = $('section');
