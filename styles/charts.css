@@ -1,13 +1,13 @@
 .charts-container {
     width: 90%;
     max-width: 960px;
-    height: 420px;
+    height: 460px;
     margin: auto;
     position: relative;
 }
     /* Styles for lines */
     .lines {
-        height: 422px;
+        height: 462px;
         position: relative;
     }
     .line {

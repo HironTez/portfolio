@@ -318,7 +318,7 @@ div.header {
 
 /* Styles for second section */
 #second-section {
-    height: calc(100vh - 160px);
+    height: 690px;
     background-color: rgb(38, 42, 43);
     padding-left: 5%;
     padding-right: 5%;
