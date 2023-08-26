@@ -286,10 +286,18 @@ const onScrollOrLoadPage = () => {
     changeActiveSection();
 }
 
+const setDisplayName = () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const displayName = urlParams.get('name');
+    if (displayName)
+        $('#display-name').text(displayName);
+}
+
 // Connect functions for events
 window.onscroll = onScrollOrLoadPage;
 window.onload = () => {
     onScrollOrLoadPage();
+    setDisplayName();
 }
 
 
