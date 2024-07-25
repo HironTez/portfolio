@@ -1,443 +1,569 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hiron Tez portfolio" />
+    <meta name="author" content="Hiron Tez" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/png" />
+    <title>Hiron Tez portfolio</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Hiron Tez portfolio">
-  <meta name="author" content="Hiron Tez">
-  <link rel="shortcut icon" href="images/logo.png" type="image/png">
-  <title>Hiron Tez portfolio</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/parallax.css" />
+    <link rel="stylesheet" href="styles/charts.css" />
+    <link rel="stylesheet" href="styles/works.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
 
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/parallax.css">
-  <link rel="stylesheet" href="styles/charts.css">
-  <link rel="stylesheet" href="styles/works.css">
-  <link rel="stylesheet" href="styles/contact.css">
-  <link rel="stylesheet" href="styles/footer.css">
+    <link href="styles/other styles/aos.css" rel="stylesheet" />
+  </head>
 
-  <link href="styles/other styles/aos.css" rel="stylesheet">
-</head>
+  <body>
+    <!-- Header -->
+    <div id="header">
+      <div id="content">
+        <div id="logo">
+          <img src="./images/logo.svg" id="logo-icon" alt="logo" />
+          <p id="logo-title">Hiron Tez</p>
+        </div>
+      </div>
+    </div>
+    <!-- About/intro -->
+    <section class="first-section container" id="first-section">
+      <div id="pt" class="space-parent">
+        <canvas id="space"></canvas>
+      </div>
+      <div class="first" data-aos="zoom-in" data-aos-duration="2000">
+        <div>
+          <h1 id="display-name">Hiron Tez</h1>
+          <p class="main-text">Hello, i'm IT Developer</p>
+          <div id="button-more" onclick="scrollToElem($('section')[1]);">
+            More
+            <div class="arrow"></div>
+          </div>
+        </div>
+      </div>
+      <div class="parallax" id="main-image" data-relative-input="true">
+        <div class="parallax-background">
+          <img
+            class="main-image-background"
+            src="./images/parallax/background.svg"
+            alt=""
+          />
+        </div>
+        <div data-depth="0.3" class="parallax-1">
+          <img class="image-1" src="./images/parallax/6.svg" alt="" />
+        </div>
+        <div data-depth="0.1" class="parallax-2">
+          <img class="image-2" src="./images/parallax/1.svg" alt="" />
+        </div>
+        <div data-depth="0.2" class="parallax-3">
+          <img class="image-3" src="./images/parallax/2.svg" alt="" />
+        </div>
+        <div data-depth="0.2" class="parallax-4">
+          <img class="image-4" src="./images/parallax/3.svg" alt="" />
+        </div>
+        <div data-depth="0.1" class="parallax-5">
+          <img class="image-5" src="./images/parallax/4.svg" alt="" />
+        </div>
+        <div data-depth="0.1" class="parallax-6">
+          <img class="image-6" src="./images/parallax/5.svg" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- Pre header (navigation) -->
+    <div id="pre-header" data-aos="fade-right">
+      <div onclick="scrollToPos(0);" class="active">Home</div>
+      <div onclick="scrollToElem($('#second-section')[0]);" class="inactive">
+        Skills
+      </div>
+      <div onclick="scrollToElem($('#third-section')[0]);" class="inactive">
+        Projects
+      </div>
+    </div>
+    <!-- Skills -->
+    <section class="second-section container" id="second-section">
+      <div class="header">
+        Skills
+        <div class="header-arrow-container waitScrollPosition">
+          <div class="header-arrow first-line"></div>
+          <div class="header-arrow second-line"></div>
+        </div>
+      </div>
+      <div class="choose-container chart">
+        <div class="choose chart active" onclick="changeTab(0, 'chart');">
+          Technologies
+        </div>
+        <div class="choose chart inactive" onclick="changeTab(1, 'chart');">
+          Development
+        </div>
+      </div>
+      <div class="charts-container">
+        <ul class="lines">
+          <li class="line l--0">
+            <span class="line__label title"> Skill level: </span>
+          </li>
+          <li class="line l--25">
+            <span class="line__label"> The basics </span>
+          </li>
+          <li class="line l--50">
+            <span class="line__label"> Advanced </span>
+          </li>
+          <li class="line l--75">
+            <span class="line__label"> Seasoned </span>
+          </li>
+          <li class="line l--100">
+            <span class="line__label"> Expert </span>
+          </li>
+        </ul>
 
-<body>
-  <!-- Header -->
-  <div id="header">
-    <div id="content">
-      <div id="logo">
-        <img src="./images/logo.svg" id="logo-icon" alt="logo">
-        <p id="logo-title">Hiron Tez</p>
-      </div>
-    </div>
-  </div>
-  <!-- About/intro -->
-  <section class="first-section container" id="first-section">
-    <div id="pt" class="space-parent">
-      <canvas id="space"></canvas>
-    </div>
-    <div class="first" data-aos="zoom-in" data-aos-duration="2000">
-      <div>
-        <h1 id="display-name">Hiron Tez</h1>
-        <p class="main-text">Hello, i'm IT Developer</p>
-        <div id="button-more" onclick="scrollToElem($('section')[1]);">
-          More
-          <div class="arrow"></div>
-        </div>
-      </div>
-    </div>
-    <div class="parallax" id="main-image" data-relative-input="true">
-      <div class="parallax-background">
-        <img class="main-image-background" src="./images/parallax/background.svg" alt="">
-      </div>
-      <div data-depth="0.3" class="parallax-1">
-        <img class="image-1" src="./images/parallax/6.svg" alt="">
-      </div>
-      <div data-depth="0.1" class="parallax-2">
-        <img class="image-2" src="./images/parallax/1.svg" alt="">
-      </div>
-      <div data-depth="0.2" class="parallax-3">
-        <img class="image-3" src="./images/parallax/2.svg" alt="">
-      </div>
-      <div data-depth="0.2" class="parallax-4">
-        <img class="image-4" src="./images/parallax/3.svg" alt="">
-      </div>
-      <div data-depth="0.1" class="parallax-5">
-        <img class="image-5" src="./images/parallax/4.svg" alt="">
-      </div>
-      <div data-depth="0.1" class="parallax-6">
-        <img class="image-6" src="./images/parallax/5.svg" alt="">
-      </div>
-    </div>
-  </section>
-  <!-- Pre header (navigation) -->
-  <div id="pre-header" data-aos="fade-right">
-    <div onclick="scrollToPos(0);" class="active">
-      Home
-    </div>
-    <div onclick="scrollToElem($('#second-section')[0]);" class="inactive">
-      Skills
-    </div>
-    <div onclick="scrollToElem($('#third-section')[0]);" class="inactive">
-      Projects
-    </div>
-  </div>
-  <!-- Skills -->
-  <section class="second-section container" id="second-section">
-    <div class="header">
-      Skills
-      <div class="header-arrow-container waitScrollPosition">
-        <div class="header-arrow first-line"></div>
-        <div class="header-arrow second-line"></div>
-      </div>
-    </div>
-    <div class="choose-container chart">
-      <div class="choose chart active" onclick="changeTab(0, 'chart');">Technologies</div>
-      <div class="choose chart inactive" onclick="changeTab(1, 'chart');">Development</div>
-    </div>
-    <div class="charts-container">
-      <ul class="lines">
-        <li class="line l--0">
-          <span class="line__label title">
-            Skill level:
-          </span>
-        </li>
-        <li class="line l--25">
-          <span class="line__label">
-            The basics
-          </span>
-        </li>
-        <li class="line l--50">
-          <span class="line__label">
-            Advanced
-          </span>
-        </li>
-        <li class="line l--75">
-          <span class="line__label">
-            Seasoned
-          </span>
-        </li>
-        <li class="line l--100">
-          <span class="line__label">
-            Expert
-          </span>
-        </li>
-      </ul>
-
-      <div class="charts">
-        <div class="chart chart--tab waitScrollPosition" id="technologies">
-          <ul class="chart--horiz">
-            <li class="chart__bar" style="width: 99%;">
-              <span class="chart__label">
-                React, NextJs, Redux
-              </span>
-            </li>
-            <li class="chart__bar" style="width: 80%;">
-              <span class="chart__label">
-                NestJs, Express, Fastify
-              </span>
-            </li>
-            <li class="chart__bar" style="width: 99%;">
-              <span class="chart__label">
-                Turbo, NX, Yarn, pnpm
-              </span>
-            </li>
-            <li class="chart__bar" style="width: 90%;">
-              <span class="chart__label">
-                Prisma, TypeORM, GraphQl
-              </span>
-            </li>
-            <li class="chart__bar" style="width: 80%;">
-              <span class="chart__label">
-                MongoDB, PostgreSQL, SQLite
-              </span>
-            </li>
-            <li class="chart__bar" style="width: 95%;">
-              <span class="chart__label">
-                JavaScript, TypeScript, Python
-              </span>
-            </li>
-            <li class="chart__bar" style="width: 65%;">
-              <span class="chart__label">
-                Aiogram, PyTelegramBotApi, Telegram API
-              </span>
-            </li>
-            <li class="chart__bar" style="width: 30%;">
-              <span class="chart__label">
-                Flask, PyQt
-              </span>
-            </li>
-            <li class="chart__bar" style="width: 25%;">
-              <span class="chart__label">
-                C#, Unity, Java, C++
-              </span>
-            </li>
-            <li class="chart__bar" style="width: 50%;">
-              <span class="chart__label">
-                Photoshop
-              </span>
-            </li>
-            <li class="chart__bar" style="width: 22%;">
-              <span class="chart__label">
-                Blender, After Effects
-              </span>
-            </li>
-          </ul>
-        </div>
-        <div class="chart chart--tab hidden" id="development">
-          <ul class="chart--horiz">
-            <li class="chart__bar" style="width: 80%;">
-              <span class="chart__label">
-                Backend
-              </span>
-            </li>
-            <li class="chart__bar" style="width: 80%;">
-              <span class="chart__label">
-                Frontend
-              </span>
-            </li>
-            <li class="chart__bar" style="width: 25%;">
-              <span class="chart__label">
-                Design
-              </span>
-            </li>
-            <li class="chart__bar" style="width: 30%;">
-              <span class="chart__label">
-                Programs
-              </span>
-            </li>
-            <li class="chart__bar" style="width: 30%;">
-              <span class="chart__label">
-                Games
-              </span>
-            </li>
-            <li class="chart__bar" style="width: 50%;">
-              <span class="chart__label">
-                Chat bots
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Portfolio -->
-  <section class="third-section container" id="third-section">
-    <div class="header">
-      My works
-      <div class="header-arrow-container waitScrollPosition">
-        <div class="header-arrow first-line"></div>
-        <div class="header-arrow second-line"></div>
-      </div>
-    </div>
-    <div class="choose-container works">
-      <div class="choose works active" onclick="changeTab(0, 'works');">Sites</div>
-      <div class="choose works inactive" onclick="changeTab(1, 'works');">Programs</div>
-      <div class="choose works inactive" onclick="changeTab(2, 'works');">Games</div>
-      <div class="choose works inactive" onclick="changeTab(3, 'works');">Different</div>
-    </div>
-    <div id="works-container">
-      <div class="works--tab active works" id="sites">
-        <div class="work" data-aos="zoom-in" data-aos-offset="200">
-          <div class="mask"></div>
-          <div class="text">
-            <div class="title">Taysteer</div>
-            <div class="technologies">Typescript, React, NestJs, Sass, Jquery</div>
-            <div class="type">Fullstack</div>
+        <div class="charts">
+          <div class="chart chart--tab waitScrollPosition" id="technologies">
+            <ul class="chart--horiz">
+              <li class="chart__bar" style="width: 99%">
+                <span class="chart__label"> React, NextJs, Redux </span>
+              </li>
+              <li class="chart__bar" style="width: 80%">
+                <span class="chart__label"> NestJs, Express, Fastify </span>
+              </li>
+              <li class="chart__bar" style="width: 99%">
+                <span class="chart__label"> Turbo, NX, Yarn, pnpm </span>
+              </li>
+              <li class="chart__bar" style="width: 90%">
+                <span class="chart__label"> Prisma, TypeORM, GraphQl </span>
+              </li>
+              <li class="chart__bar" style="width: 80%">
+                <span class="chart__label"> MongoDB, PostgreSQL, SQLite </span>
+              </li>
+              <li class="chart__bar" style="width: 95%">
+                <span class="chart__label">
+                  JavaScript, TypeScript, Python
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 65%">
+                <span class="chart__label">
+                  Aiogram, PyTelegramBotApi, Telegram API
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 30%">
+                <span class="chart__label"> Flask, PyQt </span>
+              </li>
+              <li class="chart__bar" style="width: 25%">
+                <span class="chart__label"> C#, Unity, Java, C++ </span>
+              </li>
+              <li class="chart__bar" style="width: 50%">
+                <span class="chart__label"> Photoshop </span>
+              </li>
+              <li class="chart__bar" style="width: 22%">
+                <span class="chart__label"> Blender, After Effects </span>
+              </li>
+            </ul>
           </div>
-          <div class="buttons">
-            <div class="button visit" onclick="redirect('https:/\/taysteer.herokuapp.com/');">Visit</div>
-            <div class="button github" onclick="redirect('https:/\/github.com/HironTez/Taysteer');">Github</div>
-          </div>
-        </div>
-        <div class="work" data-aos="zoom-in" data-aos-offset="200">
-          <div class="mask"></div>
-          <div class="text">
-            <div class="title">Modeling and sewing</div>
-            <div class="technologies">JavaScript</div>
-            <div class="type">Static</div>
-          </div>
-          <div class="buttons">
-            <div class="button visit" onclick="redirect('https:/\/liubovmykhalchych.github.io/cv/');">Visit</div>
-          </div>
-        </div>
-        <div class="work" data-aos="zoom-in" data-aos-offset="200">
-          <div class="mask"></div>
-          <div class="text">
-            <div class="title">Trello clone</div>
-            <div class="technologies">NodeJS, TypeScript, NestJs, Typeorm</div>
-            <div class="type">Backend</div>
-          </div>
-          <div class="buttons">
-            <div class="button github" onclick="redirect('https:/\/github.com/HironTez/Trello-clone');">Github</div>
+          <div class="chart chart--tab hidden" id="development">
+            <ul class="chart--horiz">
+              <li class="chart__bar" style="width: 80%">
+                <span class="chart__label"> Backend </span>
+              </li>
+              <li class="chart__bar" style="width: 80%">
+                <span class="chart__label"> Frontend </span>
+              </li>
+              <li class="chart__bar" style="width: 25%">
+                <span class="chart__label"> Design </span>
+              </li>
+              <li class="chart__bar" style="width: 30%">
+                <span class="chart__label"> Programs </span>
+              </li>
+              <li class="chart__bar" style="width: 30%">
+                <span class="chart__label"> Games </span>
+              </li>
+              <li class="chart__bar" style="width: 50%">
+                <span class="chart__label"> Chat bots </span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="works--tab hidden works" id="programs">
-        <div class="work" data-aos="zoom-in" data-aos-offset="200">
-          <div class="mask"></div>
-          <div class="text">
-            <div class="title">PVD media player</div>
-            <div class="type"></div>
-            <div class="technologies">Python</div>
-          </div>
-          <div class="buttons">
-            <div class="button github" onclick="redirect('https:/\/github.com/HironTez/PVD');">Github</div>
-          </div>
-        </div>
-        <div class="work" data-aos="zoom-in" data-aos-offset="200">
-          <div class="mask"></div>
-          <div class="text">
-            <div class="title">Auto backup folder (history)</div>
-            <div class="type"></div>
-            <div class="technologies">Python</div>
-          </div>
-          <div class="buttons">
-            <div class="button github" onclick="redirect('https:/\/github.com/HironTez/Auto-backup-folder-history');">
-              Github</div>
-          </div>
-        </div>
-        <div class="work" data-aos="zoom-in" data-aos-offset="200">
-          <div class="mask"></div>
-          <div class="text">
-            <div class="title">Window Centerer</div>
-            <div class="type"></div>
-            <div class="technologies">C++, WinAPI</div>
-          </div>
-          <div class="buttons">
-            <div class="button github" onclick="redirect('https:\/\/github.com/HironTez/Window-Centerer');">
-              Github</div>
-          </div>
+    </section>
+    <!-- Portfolio -->
+    <section class="third-section container" id="third-section">
+      <div class="header">
+        My works
+        <div class="header-arrow-container waitScrollPosition">
+          <div class="header-arrow first-line"></div>
+          <div class="header-arrow second-line"></div>
         </div>
       </div>
-      <div class="works--tab hidden works" id="games">
-        <div class="work" data-aos="zoom-in" data-aos-offset="200">
-          <div class="mask"></div>
-          <div class="text">
-            <div class="title">Rubik's Cube</div>
-            <div class="technologies">JavaScript, Three.JS</div>
-          </div>
-          <div class="buttons">
-            <div class="button visit" onclick="redirect('https:/\/hirontez.github.io/Rubiks-Cube/');">Visit</div>
-            <div class="button github" onclick="redirect('https:/\/github.com/HironTez/Rubiks-Cube');">Github</div>
-          </div>
+      <div class="choose-container works">
+        <div class="choose works active" onclick="changeTab(0, 'works');">
+          Sites
         </div>
-        <div class="work" data-aos="zoom-in" data-aos-offset="200">
-          <div class="mask"></div>
-          <div class="text">
-            <div class="title">Spaceship</div>
-            <div class="technologies">JavaScript, jQuery</div>
-          </div>
-          <div class="buttons">
-            <div class="button visit" onclick="redirect('https:/\/hirontez.github.io/Spaceship-game/');">Visit</div>
-            <div class="button github" onclick="redirect('https:/\/github.com/HironTez/Spaceship-game');">Github</div>
-          </div>
+        <div class="choose works inactive" onclick="changeTab(1, 'works');">
+          Programs
         </div>
-        <div class="work" data-aos="zoom-in" data-aos-offset="200">
-          <div class="mask"></div>
-          <div class="text">
-            <div class="title">Racing</div>
-            <div class="technologies">C#, Unity</div>
-          </div>
-          <div class="buttons">
-            <div class="button github" onclick="redirect('https:/\/github.com/HironTez/RacingGame');">Github</div>
-          </div>
+        <div class="choose works inactive" onclick="changeTab(2, 'works');">
+          Games
+        </div>
+        <div class="choose works inactive" onclick="changeTab(3, 'works');">
+          Different
         </div>
       </div>
-      <div class="works--tab hidden works" id="different">
-        <div class="work" data-aos="zoom-in" data-aos-offset="200">
-          <div class="mask"></div>
-          <div class="text">
-            <div class="title">Telegram bot — web parser</div>
-            <div class="technologies">Python, Aiogram,<br>Telegram API</div>
+      <div id="works-container">
+        <div class="works--tab active works" id="sites">
+          <div class="work" data-aos="zoom-in" data-aos-offset="200">
+            <div class="mask"></div>
+            <div class="text">
+              <div class="title">Taysteer</div>
+              <div class="technologies">
+                Typescript, React, NestJs, Sass, Jquery
+              </div>
+              <div class="type">Fullstack</div>
+            </div>
+            <div class="buttons">
+              <div
+                class="button visit"
+                onclick="redirect('https:/\/taysteer.herokuapp.com/');"
+              >
+                Visit
+              </div>
+              <div
+                class="button"
+                onclick="redirect('https:/\/github.com/HironTez/Taysteer');"
+              >
+                Github
+              </div>
+            </div>
           </div>
-          <div class="buttons">
-            <div class="button" onclick="createInfoMessage('Web parser. Sends notification of new publications to subscribers.', this);">Details</div>
+          <div class="work" data-aos="zoom-in" data-aos-offset="200">
+            <div class="mask"></div>
+            <div class="text">
+              <div class="title">Modeling and sewing</div>
+              <div class="technologies">JavaScript</div>
+              <div class="type">Static</div>
+            </div>
+            <div class="buttons">
+              <div
+                class="button visit"
+                onclick="redirect('https:/\/liubovmykhalchych.github.io/cv/');"
+              >
+                Visit
+              </div>
+            </div>
+          </div>
+          <div class="work" data-aos="zoom-in" data-aos-offset="200">
+            <div class="mask"></div>
+            <div class="text">
+              <div class="title">Trello clone</div>
+              <div class="technologies">
+                NodeJS, TypeScript, NestJs, Typeorm
+              </div>
+              <div class="type">Backend</div>
+            </div>
+            <div class="buttons">
+              <div
+                class="button"
+                onclick="redirect('https:/\/github.com/HironTez/Trello-clone');"
+              >
+                Github
+              </div>
+            </div>
           </div>
         </div>
-        <div class="work" data-aos="zoom-in" data-aos-offset="200">
-          <div class="mask"></div>
-          <div class="text">
-            <div class="title">Low poly car</div>
-            <div class="technologies">Blender</div>
-            <div class="type">3D model</div>
+        <div class="works--tab hidden works" id="programs">
+          <div class="work" data-aos="zoom-in" data-aos-offset="200">
+            <div class="mask"></div>
+            <div class="text">
+              <div class="title">PVD media player</div>
+              <div class="technologies">Python</div>
+              <div class="type"></div>
+            </div>
+            <div class="buttons">
+              <div
+                class="button"
+                onclick="redirect('https:/\/github.com/HironTez/PVD');"
+              >
+                Github
+              </div>
+            </div>
           </div>
-          <div class="buttons">
-            <div class="button" onclick="show3DModelPreview('./images/models/car_model.glb');">View</div>
+          <div class="work" data-aos="zoom-in" data-aos-offset="200">
+            <div class="mask"></div>
+            <div class="text">
+              <div class="title">Auto backup folder (history)</div>
+              <div class="technologies">Python</div>
+              <div class="type"></div>
+            </div>
+            <div class="buttons">
+              <div
+                class="button"
+                onclick="redirect('https:/\/github.com/HironTez/Auto-backup-folder-history');"
+              >
+                Github
+              </div>
+            </div>
+          </div>
+          <div class="work" data-aos="zoom-in" data-aos-offset="200">
+            <div class="mask"></div>
+            <div class="text">
+              <div class="title">Window Centerer</div>
+              <div class="technologies">C++, WinAPI</div>
+              <div class="type"></div>
+            </div>
+            <div class="buttons">
+              <div
+                class="button"
+                onclick="redirect('https:\/\/github.com/HironTez/Window-Centerer');"
+              >
+                Github
+              </div>
+            </div>
           </div>
         </div>
-        <div class="work" data-aos="zoom-in" data-aos-offset="200">
-          <div class="mask"></div>
-          <div class="text">
-            <div class="title">Color contrast theme</div>
-            <div class="type">IDE Theme</div>
+        <div class="works--tab hidden works" id="games">
+          <div class="work" data-aos="zoom-in" data-aos-offset="200">
+            <div class="mask"></div>
+            <div class="text">
+              <div class="title">Rubik's Cube</div>
+              <div class="technologies">JavaScript, Three.JS</div>
+              <div class="type"></div>
+            </div>
+            <div class="buttons">
+              <div
+                class="button visit"
+                onclick="redirect('https:/\/hirontez.github.io/Rubiks-Cube/');"
+              >
+                Visit
+              </div>
+              <div
+                class="button"
+                onclick="redirect('https:/\/github.com/HironTez/Rubiks-Cube');"
+              >
+                Github
+              </div>
+            </div>
           </div>
-          <div class="buttons">
-            <div class="button" onclick="redirect('https:/\/vscodethemes.com/e/hirontez.color-contrast-theme/color-contrast-dark-bold?language=javascript');">View</div>
+          <div class="work" data-aos="zoom-in" data-aos-offset="200">
+            <div class="mask"></div>
+            <div class="text">
+              <div class="title">Spaceship</div>
+              <div class="technologies">JavaScript, jQuery</div>
+              <div class="type"></div>
+            </div>
+            <div class="buttons">
+              <div
+                class="button visit"
+                onclick="redirect('https:/\/hirontez.github.io/Spaceship-game/');"
+              >
+                Visit
+              </div>
+              <div
+                class="button"
+                onclick="redirect('https:/\/github.com/HironTez/Spaceship-game');"
+              >
+                Github
+              </div>
+            </div>
+          </div>
+          <div class="work" data-aos="zoom-in" data-aos-offset="200">
+            <div class="mask"></div>
+            <div class="text">
+              <div class="title">Racing</div>
+              <div class="technologies">C#, Unity</div>
+              <div class="type"></div>
+            </div>
+            <div class="buttons">
+              <div
+                class="button"
+                onclick="redirect('https:/\/github.com/HironTez/RacingGame');"
+              >
+                Github
+              </div>
+            </div>
+          </div>
+          <div class="work" data-aos="zoom-in" data-aos-offset="200">
+            <div class="mask"></div>
+            <div class="text">
+              <div class="title">Chess Core</div>
+              <div class="technologies">Typescript</div>
+              <div class="type">Headless</div>
+            </div>
+            <div class="buttons">
+              <div
+                class="button"
+                onclick="createInfoMessage('This is a fully functional game core that implements all the functionality and logic and provides an easy way to interact with the pieces.', this);"
+              >
+                Details
+              </div>
+              <div
+                class="button"
+                onclick="redirect('https:/\/github.com/HironTez/Chess');"
+              >
+                Github
+              </div>
+              <div
+                class="button"
+                onclick="redirect('https:/\/www.npmjs.com/package/@hiron-tez/chess');"
+              >
+                npm
+              </div>
+            </div>
           </div>
         </div>
-        <!-- <div class="no-work">
+        <div class="works--tab hidden works" id="different">
+          <div class="work" data-aos="zoom-in" data-aos-offset="200">
+            <div class="mask"></div>
+            <div class="text">
+              <div class="title">Telegram bot — web parser</div>
+              <div class="technologies">Python, Aiogram,<br />Telegram API</div>
+              <div class="type"></div>
+            </div>
+            <div class="buttons">
+              <div
+                class="button"
+                onclick="createInfoMessage('Web parser. Sends notification of new publications to subscribers.', this);"
+              >
+                Details
+              </div>
+            </div>
+          </div>
+          <div class="work" data-aos="zoom-in" data-aos-offset="200">
+            <div class="mask"></div>
+            <div class="text">
+              <div class="title">Low poly car</div>
+              <div class="technologies">Blender</div>
+              <div class="type">3D model</div>
+            </div>
+            <div class="buttons">
+              <div
+                class="button"
+                onclick="show3DModelPreview('./images/models/car_model.glb');"
+              >
+                View
+              </div>
+            </div>
+          </div>
+          <div class="work" data-aos="zoom-in" data-aos-offset="200">
+            <div class="mask"></div>
+            <div class="text">
+              <div class="title">Color contrast theme</div>
+              <div class="technologies"></div>
+              <div class="type">IDE Theme</div>
+            </div>
+            <div class="buttons">
+              <div
+                class="button"
+                onclick="redirect('https:/\/vscodethemes.com/e/hirontez.color-contrast-theme/color-contrast-dark-bold?language=javascript');"
+              >
+                View
+              </div>
+            </div>
+          </div>
+          <!-- <div class="no-work">
           <p>Unfortunately, there is nothing here.</p>
           <p>Look at other tabs or help fill this one by ordering the work in the field below.</p>
         </div> -->
+        </div>
       </div>
-    </div>
-  </section>
-  <!-- Contact -->
-  <div class="contact">
-    <div class="form-container" onclick="closeForm();">
-      <div class="form close" onclick="closeButtonAnimation(this);"></div>
-      <div class="title noParentClick">I’m excited to learn about your project and answer all your questions. Ready to
-        get started?</div>
-      <form class="noParentClick">
-        <div class="input-container">
-          Name
-          <input type="text" name="name" class="name" placeholder="Enter your name">
+    </section>
+    <!-- Contact -->
+    <div class="contact">
+      <div class="form-container" onclick="closeForm();">
+        <div class="form close" onclick="closeButtonAnimation(this);"></div>
+        <div class="title noParentClick">
+          I’m excited to learn about your project and answer all your questions.
+          Ready to get started?
         </div>
-        <div class="input-container">
-          Email *
-          <input type="email" name="_replyto" class="replyto" placeholder="Enter your email" required>
-        </div>
-        <div class="input-container">
-          Message *
-          <textarea name="message" class="message" rows="4" cols="50" placeholder="Enter your message" required></textarea>
-        </div>
-        <button onclick="return submitForm();" type="submit">Send</button>
-      </form>
-    </div>
+        <form class="noParentClick">
+          <div class="input-container">
+            Name
+            <input
+              type="text"
+              name="name"
+              class="name"
+              placeholder="Enter your name"
+            />
+          </div>
+          <div class="input-container">
+            Email *
+            <input
+              type="email"
+              name="_replyto"
+              class="replyto"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="input-container">
+            Message *
+            <textarea
+              name="message"
+              class="message"
+              rows="4"
+              cols="50"
+              placeholder="Enter your message"
+              required
+            ></textarea>
+          </div>
+          <button onclick="return submitForm();" type="submit">Send</button>
+        </form>
+      </div>
 
-    <div class="sentence order">
-      <div class="title order" data-aos="zoom-in-right" data-aos-duration="500" data-aos-offset="20">Start a project</div>
-      <div class="text order" data-aos="zoom-in" data-aos-duration="500" data-aos-offset="20">Interested in working together?<br>Write your
-        suggestions or questions.</div>
-      <div class="button order" onclick="showForm();" data-aos="zoom-in-left" data-aos-duration="500" data-aos-offset="20">Let's do this
-      </div>
-    </div>
-  </div>
-  <!-- Footer -->
-  <section class="fourth-section container" id="four-section">
-    <div class="container in-bottom-section">
-      <div class="logo bottom container">
-        <img src="./images/logo.svg" class="logo bottom" alt="logo">
-      </div>
-      <div class="text bottom">
-        Living, learning and leveling up every day.
-      </div>
-      <div class="button-up" onclick="scrollToPos(0);">
-        <div id="arrows">
-          <span class="arrow first next"></span>
-          <span class="arrow second next"></span>
+      <div class="sentence order">
+        <div
+          class="title order"
+          data-aos="zoom-in-right"
+          data-aos-duration="500"
+          data-aos-offset="20"
+        >
+          Start a project
+        </div>
+        <div
+          class="text order"
+          data-aos="zoom-in"
+          data-aos-duration="500"
+          data-aos-offset="20"
+        >
+          Interested in working together?<br />Write your suggestions or
+          questions.
+        </div>
+        <div
+          class="button order"
+          onclick="showForm();"
+          data-aos="zoom-in-left"
+          data-aos-duration="500"
+          data-aos-offset="20"
+        >
+          Let's do this
         </div>
       </div>
     </div>
-  </section>
+    <!-- Footer -->
+    <section class="fourth-section container" id="four-section">
+      <div class="container in-bottom-section">
+        <div class="logo bottom container">
+          <img src="./images/logo.svg" class="logo bottom" alt="logo" />
+        </div>
+        <div class="text bottom">
+          Living, learning and leveling up every day.
+        </div>
+        <div class="button-up" onclick="scrollToPos(0);">
+          <div id="arrows">
+            <span class="arrow first next"></span>
+            <span class="arrow second next"></span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <script src="./scripts/other scripts/jquery.js"></script>
-  <script src="./scripts/other scripts/parallax.js"></script>
-  <script src="./scripts/other scripts/pt.min.js"></script>
-  <script src="./scripts/other scripts/aos.js"></script>
-  <script src="./scripts/canvas.js"></script>
-  <script src="./scripts/script.js"></script>
-  <script type="module" src="./scripts/other scripts/model-viewer.min.js"></script>
-</body>
-
+    <script src="./scripts/other scripts/jquery.js"></script>
+    <script src="./scripts/other scripts/parallax.js"></script>
+    <script src="./scripts/other scripts/pt.min.js"></script>
+    <script src="./scripts/other scripts/aos.js"></script>
+    <script src="./scripts/canvas.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script
+      type="module"
+      src="./scripts/other scripts/model-viewer.min.js"
+    ></script>
+  </body>
 </html>

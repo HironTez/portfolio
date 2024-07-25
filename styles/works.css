@@ -75,6 +75,9 @@ div.work {
     div.works--tab:nth-child(3) > div.work:nth-child(3) {
         background-image: url(../images/projects/low_poly_car_model_preview.png);
     }
+    div.works--tab:nth-child(3) > div.work:nth-child(4) {
+        background-image: url(../images/projects/Chess.png);
+    }
 
     div.works--tab:nth-child(4) > div.work:nth-child(1) {
         background-image: url(../images/projects/bot-parser.png);
