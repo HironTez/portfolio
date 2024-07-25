@@ -47,12 +47,15 @@ div.work {
     }
 
     div.works--tab:nth-child(1) > div.work:nth-child(1) {
-        background-image: url(../images/projects/Taysteer.svg);
+        background-image: url(../images/projects/Taysteer-2.png);
     }
     div.works--tab:nth-child(1) > div.work:nth-child(2) {
-        background-image: url(../images/projects/modeling-and-sewing.png);
+        background-image: url(../images/projects/Taysteer.svg);
     }
     div.works--tab:nth-child(1) > div.work:nth-child(3) {
+        background-image: url(../images/projects/modeling-and-sewing.png);
+    }
+    div.works--tab:nth-child(1) > div.work:nth-child(4) {
         background-image: url(../images/projects/Trello-clone.png);
     }
 
