@@ -99,11 +99,12 @@ div.header {
     -moz-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
-    padding-bottom: 5%;
+    padding-bottom: 7%;
 }
     div.header-arrow-container {
         position: absolute;
         left: 50%;
+        top: calc(50% + 10px);
         -o-transform: translate(-150%, 10px);
         -webkit-transform: translate(-150%, 10px);
         -moz-transform: translate(-150%, 10px);
@@ -323,7 +324,6 @@ div.header {
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 80px;
-    padding-bottom: 80px;
 }
 
 /* Styles for third section */
